@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
 
   grunt.initConfig({
-    // host_config: grunt.file.readJSON('.host_config'),
+    host_config: grunt.file.readJSON('.host_config'),
     compass: {
       dist: {
         options: {
@@ -27,11 +27,8 @@ module.exports = function(grunt) {
         src: '.',
         dest: '<%- host_config.directory %>',
         exclusions: [
-          '.DS_Store',
-          '.sass-cache',
-          '.git*',
-          '.host_config',
-          '.ftppass',
+          '.*',
+          'bower.json',
           'node_modules',
           'sass',
           'Gruntfile.js',
