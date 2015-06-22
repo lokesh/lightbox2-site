@@ -1,0 +1,27 @@
+{
+  "name": "lightbox2-site",
+  "homepage": "http://lokeshdhakar.com/projects/lightbox2/",
+  "authors": [
+    "Lokesh Dhakar <lokesh.dhakar@gmail.com>"
+  ],
+  "description": "Lightbox2 site, which includes demos, usage instructions, and troubleshooting information. Lives at lokeshdhakar.com/projects/lightbox2/.",
+  "main": [
+    "./index.html"
+  ],
+  "keywords": [
+    "lightbox",
+    "lightbox2",
+    "overlay",
+    "gallery",
+    "slideshow",
+    "images"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "lightbox2": "~2.7.2"
+  }
+}
