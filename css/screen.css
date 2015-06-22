@@ -233,7 +233,7 @@ h1, h2, h3, h4, h5 {
 /* line 77, ../sass/screen.sass */
 h1 {
   font-size: 4.5rem;
-  margin: 0 0 0.1em 0;
+  margin: 0;
 }
 
 /* line 81, ../sass/screen.sass */
@@ -309,9 +309,9 @@ a:hover {
 code {
   color: #666;
   background-color: whitesmoke;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
   font-family: Consolas, Courier, monospace;
   font-size: 0.9rem;
   padding: 0.1rem 0.3rem;
@@ -322,9 +322,9 @@ code {
 /* line 140, ../sass/screen.sass */
 pre {
   background-color: whitesmoke;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
   padding: 0 0.5rem 0.1rem 0.5rem;
 }
 /* line 144, ../sass/screen.sass */
@@ -355,20 +355,20 @@ ul {
   display: block;
   padding: 0.7rem 2rem;
   margin-bottom: 0.5rem;
-  border: none;
-  color: #fff;
-  background-color: #4ae;
+  border: 2px solid #4ae;
+  color: #4ae;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
   vertical-align: middle;
   white-space: nowrap;
 }
-/* line 177, ../sass/screen.sass */
+/* line 176, ../sass/screen.sass */
 .button:hover {
-  background: #1595ea;
+  color: white;
+  background-color: #4ae;
   text-decoration: none;
 }
 
@@ -376,26 +376,18 @@ ul {
   /* line 182, ../sass/screen.sass */
   .button {
     display: inline-block;
-    margin-right: 0.25rem;
+    margin-right: 8px;
   }
 }
 /* line 186, ../sass/screen.sass */
 .button-minor {
   padding: 0.3rem 1rem;
-  border: 2px solid #4ae;
-  color: #4ae;
-  background-color: transparent;
   font-size: 0.8rem;
-}
-/* line 192, ../sass/screen.sass */
-.button-minor:hover {
-  color: white;
-  background: #4ae;
 }
 
 /* Elements
  * ========================================================================== */
-/* line 200, ../sass/screen.sass */
+/* line 194, ../sass/screen.sass */
 hr {
   border: 0;
   border-top: 2px solid whitesmoke;
@@ -404,21 +396,21 @@ hr {
 }
 
 /* -- Layout ------------------------------------------------------------------ */
-/* line 209, ../sass/screen.sass */
+/* line 203, ../sass/screen.sass */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 212, ../sass/screen.sass */
+/* line 206, ../sass/screen.sass */
 body {
   margin: 0;
   padding: 0;
   background: #fff;
 }
 
-/* line 217, ../sass/screen.sass */
+/* line 211, ../sass/screen.sass */
 .nav {
   display: none;
   position: fixed;
@@ -431,35 +423,35 @@ body {
 }
 
 @media (min-width: 640px) {
-  /* line 228, ../sass/screen.sass */
+  /* line 222, ../sass/screen.sass */
   .nav {
     display: block;
     width: 20%;
   }
 }
-/* line 232, ../sass/screen.sass */
+/* line 226, ../sass/screen.sass */
 .nav-title {
   padding: 2px 32px 2px 0;
 }
 
-/* line 235, ../sass/screen.sass */
+/* line 229, ../sass/screen.sass */
 .nav-item {
   display: block;
   padding: 2px 32px 2px 0;
 }
 
-/* line 239, ../sass/screen.sass */
+/* line 233, ../sass/screen.sass */
 .content {
   margin-left: 0;
 }
 
 @media (min-width: 640px) {
-  /* line 243, ../sass/screen.sass */
+  /* line 237, ../sass/screen.sass */
   .content {
     margin-left: 20%;
   }
 }
-/* line 246, ../sass/screen.sass */
+/* line 240, ../sass/screen.sass */
 section {
   border-top: 2px solid whitesmoke;
   text-align: center;
@@ -468,13 +460,13 @@ section {
 }
 
 @media (min-width: 640px) {
-  /* line 253, ../sass/screen.sass */
+  /* line 247, ../sass/screen.sass */
   section {
     padding: 4rem 0;
     text-align: left;
   }
 }
-/* line 257, ../sass/screen.sass */
+/* line 251, ../sass/screen.sass */
 .container {
   margin: 0 auto;
   max-width: 1000px;
@@ -482,12 +474,12 @@ section {
 }
 
 @media (min-width: 640px) {
-  /* line 263, ../sass/screen.sass */
+  /* line 257, ../sass/screen.sass */
   .container {
     padding: 0 32px;
   }
 }
-/* line 267, ../sass/screen.sass */
+/* line 261, ../sass/screen.sass */
 .row {
   *zoom: 1;
 }
@@ -498,7 +490,7 @@ section {
   clear: both;
 }
 
-/* line 273, ../sass/screen.sass */
+/* line 267, ../sass/screen.sass */
 header {
   background-color: white;
   padding-top: 5rem;
@@ -506,52 +498,67 @@ header {
   color: #666;
 }
 
-@media (min-width: 40rem) {
-  /* line 280, ../sass/screen.sass */
+@media (min-width: 640px) {
+  /* line 274, ../sass/screen.sass */
   header {
     padding-top: 6.5rem;
     text-align: left;
   }
 }
-/* line 284, ../sass/screen.sass */
+/* line 278, ../sass/screen.sass */
 .picture-icon {
   width: 2.7rem;
   height: 2.7rem;
   margin-right: 0.5rem;
 }
 
-/* line 289, ../sass/screen.sass */
+/* line 283, ../sass/screen.sass */
+.logo-credit {
+  display: block;
+  margin-bottom: 1em;
+  color: #666;
+}
+
+@media (min-width: 640px) {
+  /* line 289, ../sass/screen.sass */
+  .logo-credit {
+    position: relative;
+    top: -3px;
+    left: 49px;
+  }
+}
+/* line 294, ../sass/screen.sass */
 .primary-actions {
   padding-bottom: 5rem;
 }
 
 /* -- Examples -- */
-/* line 295, ../sass/screen.sass */
+/* line 300, ../sass/screen.sass */
 .example-image-link {
   display: inline-block;
   padding: 4px;
   margin: 0 0.5rem 1rem 0.5rem;
   background-color: #fff;
   line-height: 0;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
   -moz-transition: background-color 0.5s ease-out;
   -o-transition: background-color 0.5s ease-out;
   -webkit-transition: background-color 0.5s ease-out;
   transition: background-color 0.5s ease-out;
 }
 
-/* line 304, ../sass/screen.sass */
+/* line 309, ../sass/screen.sass */
 .example-image {
   width: 7rem;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
 }
 
 /* -- How to use -- */
-/* line 312, ../sass/screen.sass */
+/* line 317, ../sass/screen.sass */
 .how-to-use-section p,
 .how-to-use-section ol,
 .how-to-use-section ul,
@@ -560,29 +567,29 @@ header {
 }
 
 /* -- Credits -- */
-/* line 320, ../sass/screen.sass */
+/* line 325, ../sass/screen.sass */
 footer {
   padding: 2rem 0;
   border-top: 2px solid whitesmoke;
   background-color: white;
   text-align: center;
 }
-/* line 325, ../sass/screen.sass */
+/* line 330, ../sass/screen.sass */
 footer .button {
   margin-top: 0.5rem;
 }
 
 @media (min-width: 40rem) {
-  /* line 329, ../sass/screen.sass */
+  /* line 334, ../sass/screen.sass */
   footer {
     text-align: left;
   }
 }
 /* -- Sharing -- */
-/* line 334, ../sass/screen.sass */
+/* line 339, ../sass/screen.sass */
 .sharing-section {
   position: fixed;
   z-index: 20;
-  top: 20px;
-  right: 0;
+  top: 16px;
+  right: 16px;
 }
