@@ -12,6 +12,7 @@ module.exports = function(grunt) {
         }
       },
     },
+    clean: ['src/css'],
     copy: {
       images: {
         files: [
@@ -83,6 +84,7 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-ftp-deploy');
@@ -90,6 +92,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sass');
 
   grunt.registerTask('default', ['watch']);
-  grunt.registerTask('build', ['highlight','sass','autoprefixer', 'copy']);
+  grunt.registerTask('build', ['highlight','sass','autoprefixer', 'copy', 'clean']);
   grunt.registerTask('deploy', ['ftp-deploy']);
 };
