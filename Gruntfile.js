@@ -2,21 +2,15 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     host_config: grunt.file.readJSON('.host_config'),
-    compass: {
+    autoprefixer: {
+      options: {
+         browsers: ['last 2 versions']
+      },
       dist: {
-        options: {
-          sassDir: 'sass',
-          cssDir: 'css',
-          environment: 'development'
+        files: {
+          'css/screen.css': 'css/screen.css'
         }
-      }
-    },
-    connect: {
-      server: {
-        options: {
-          port: 8000
-        }
-      }
+      },
     },
     'ftp-deploy': {
       build: {
@@ -37,23 +31,30 @@ module.exports = function(grunt) {
         ]
       }
     },
+    sass: {
+      dist: {
+        files: {
+          'css/screen.css' : 'sass/screen.sass'
+        }
+      }
+    },
     watch: {
       sass: {
         files: ['sass/*.sass'],
-        tasks: ['compass'],
-        options: {
-          livereload: true,
-          spawn: false
-        },
+        tasks: ['sass', 'autoprefixer'],
+      },
+      autoprefixer: {
+        files: ['css/*.css'],
+        tasks: ['autoprefixer'],
       }
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-compass');
-  grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-ftp-deploy');
+  grunt.loadNpmTasks('grunt-sass');
 
-  grunt.registerTask('default', ['compass', 'connect', 'watch']);
+  grunt.registerTask('default', ['watch']);
   grunt.registerTask('deploy', ['ftp-deploy']);
 };
