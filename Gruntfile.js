@@ -8,9 +8,36 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'css/screen.css': 'css/screen.css'
+          'dist/css/screen.css': 'src/css/screen.css'
         }
       },
+    },
+    copy: {
+      images: {
+        files: [
+          {
+            expand: true,
+            cwd: 'src/images/',
+            src: ['**'],
+            dest: 'dist/images'
+          }
+        ],
+      },
+      jquery: {
+        files: {
+            'dist/js/jquery.min.js': 'bower_components/jquery/dist/jquery.min.js'
+        }
+      },
+      lightbox2: {
+        files: [
+          {
+            expand: true,
+            cwd: 'bower_components/lightbox2/dist',
+            src: ['**'],
+            dest: 'dist/'
+          }
+        ]
+      }
     },
     'ftp-deploy': {
       build: {
@@ -18,43 +45,51 @@ module.exports = function(grunt) {
           host: '<%- host_config.host %>',
           port: '<%- host_config.port %>'
         },
-        src: '.',
+        src: './dist',
         dest: '<%- host_config.directory %>',
         exclusions: [
-          '.*',
-          'bower.json',
-          'node_modules',
-          'sass',
-          'Gruntfile.js',
-          'package.json',
-          'README.markdown'
+          '.*'
         ]
+      }
+    },
+    highlight: {
+      task: {
+        files: {
+          'dist/index.html': ['src/index.html']
+        }    
       }
     },
     sass: {
       dist: {
         files: {
-          'css/screen.css' : 'sass/screen.sass'
+          'src/css/screen.css' : 'src/sass/screen.sass'
         }
       }
     },
     watch: {
       sass: {
-        files: ['sass/*.sass'],
-        tasks: ['sass', 'autoprefixer'],
+        files: ['src/sass/*.sass'],
+        tasks: ['sass'],
       },
       autoprefixer: {
-        files: ['css/*.css'],
+        files: ['src/css/screen.css'],
         tasks: ['autoprefixer'],
+      },
+      highlight: {
+        files: ['src/index.html'],
+        tasks: ['highlight'],
       }
     }
   });
 
   grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-ftp-deploy');
+  grunt.loadNpmTasks('grunt-highlight');
   grunt.loadNpmTasks('grunt-sass');
 
   grunt.registerTask('default', ['watch']);
+  grunt.registerTask('build', ['highlight','sass','autoprefixer', 'copy']);
   grunt.registerTask('deploy', ['ftp-deploy']);
 };
