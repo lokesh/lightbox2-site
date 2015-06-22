@@ -165,7 +165,7 @@ ul
 .button
   display: block
   padding: 0.7rem 2rem
-  margin-bottom: 0.5rem
+  margin-bottom: 8px
   border: 2px solid $link-color
   color: $link-color
   text-transform: uppercase
@@ -183,19 +183,19 @@ ul
     display: inline-block
     margin-right: 8px
 
-.button-minor
-  padding: 0.3rem 1rem
-  font-size: 0.8rem
-
 
 /* Elements
  * ========================================================================== */
 
 hr
+  width: 348px
   border: 0
   border-top: 2px solid $border-color
-  margin: 1rem auto 1.5rem auto
-  width: 3rem
+  
+@media (min-width: $sm-screen)  
+  hr
+    width: 480px
+    margin-left: 0
 
 
 /* -- Layout ------------------------------------------------------------------ */

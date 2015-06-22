@@ -354,7 +354,7 @@ ul {
 .button {
   display: block;
   padding: 0.7rem 2rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 8px;
   border: 2px solid #4ae;
   color: #4ae;
   text-transform: uppercase;
@@ -379,22 +379,22 @@ ul {
     margin-right: 8px;
   }
 }
-/* line 186, ../sass/screen.sass */
-.button-minor {
-  padding: 0.3rem 1rem;
-  font-size: 0.8rem;
-}
-
 /* Elements
  * ========================================================================== */
-/* line 194, ../sass/screen.sass */
+/* line 190, ../sass/screen.sass */
 hr {
+  width: 348px;
   border: 0;
   border-top: 2px solid whitesmoke;
-  margin: 1rem auto 1.5rem auto;
-  width: 3rem;
 }
 
+@media (min-width: 640px) {
+  /* line 196, ../sass/screen.sass */
+  hr {
+    width: 480px;
+    margin-left: 0;
+  }
+}
 /* -- Layout ------------------------------------------------------------------ */
 /* line 203, ../sass/screen.sass */
 *, *:before, *:after {
