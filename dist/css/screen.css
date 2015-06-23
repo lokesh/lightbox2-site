@@ -666,13 +666,23 @@ h2 {
   color: #FF5722;
   margin-top: 0;
   margin-bottom: 2rem;
+  text-align: center;
   font-size: 34px;
   font-weight: 400; }
 
+@media (min-width: 640px) {
+  h2 {
+    text-align: left; } }
+
 h3 {
   margin-bottom: 1rem;
+  text-align: center;
   font-size: 20px;
   font-weight: 500; }
+
+@media (min-width: 640px) {
+  h3 {
+    text-align: left; } }
 
 p {
   margin: 0 auto 2em auto; }
@@ -690,7 +700,7 @@ ol {
   margin: 0 0 1.25em 0; }
 
 li {
-  margin-bottom: 2em; }
+  margin-bottom: 0.5rem; }
 
 strong {
   font-weight: bold; }
@@ -809,14 +819,12 @@ body {
 
 section {
   border-top: 2px solid whitesmoke;
-  text-align: center;
   padding: 2rem 0;
   background-color: white; }
 
 @media (min-width: 640px) {
   section {
-    padding: 4rem 0;
-    text-align: left; } }
+    padding: 4rem 0; } }
 
 .container {
   margin: 0 auto;
@@ -885,6 +893,9 @@ header {
 .how-to-use-section ul,
 .how-to-use-section pre {
   text-align: left; }
+
+.how-to-use-section li {
+  margin-bottom: 2rem; }
 
 /* -- Credits -- */
 footer {
