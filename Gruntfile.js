@@ -60,6 +60,9 @@ module.exports = function(grunt) {
         }    
       }
     },
+    htmllint: {
+      all: ['dist/index.html']
+    },
     sass: {
       dist: {
         files: {
@@ -79,6 +82,10 @@ module.exports = function(grunt) {
       highlight: {
         files: ['src/index.html'],
         tasks: ['highlight'],
+      },
+      htmllint: {
+        files: ['dist/index.html'],
+        tasks: ['htmllint'],
       }
     }
   });
@@ -89,9 +96,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-ftp-deploy');
   grunt.loadNpmTasks('grunt-highlight');
+  grunt.loadNpmTasks('grunt-html');  
   grunt.loadNpmTasks('grunt-sass');
 
   grunt.registerTask('default', ['watch']);
-  grunt.registerTask('build', ['highlight','sass','autoprefixer', 'copy', 'clean']);
+  grunt.registerTask('build', ['highlight', 'htmllint', 'sass','autoprefixer', 'copy', 'clean']);
   grunt.registerTask('deploy', ['ftp-deploy']);
 };

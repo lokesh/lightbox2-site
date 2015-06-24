@@ -24,6 +24,7 @@
     "grunt-contrib-watch": "^0.5.3",
     "grunt-ftp-deploy": "^0.1.10",
     "grunt-highlight": "0.0.1",
+    "grunt-html": "^4.0.3",
     "grunt-sass": "^1.0.0"
   }
 }
