@@ -99,7 +99,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-html');  
   grunt.loadNpmTasks('grunt-sass');
 
-  grunt.registerTask('default', ['watch']);
+  grunt.registerTask('default', ['build', 'watch']);
   grunt.registerTask('build', ['highlight', 'htmllint', 'sass','autoprefixer', 'copy', 'clean']);
   grunt.registerTask('deploy', ['ftp-deploy']);
 };
