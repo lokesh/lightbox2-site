@@ -18,10 +18,9 @@
   </head>
   <body>
 
-    <nav class="nav">
-      <div class="nav-title">Jump to:</div>
+    <nav id="nav" class="nav">
       <a href="#examples" class="nav-item">Examples</a>
-      <a href="#how-to-use" class="nav-item">How to use</a>
+      <a href="#getting-started" class="nav-item">Getting started</a>
       <a href="#options" class="nav-item">Options</a>
       <a href="#browser-support" class="nav-item">Browser support</a>
       <a href="#license" class="nav-item">License</a>
@@ -45,8 +44,8 @@
           </p>
           <div class="primary-actions">
             <a href="https://github.com/lokesh/lightbox2/archive/master.zip" class="button">
-            Download
-          </a>
+              Download
+            </a>
             <a href="https://github.com/lokesh/lightbox2/" class="button">
             View on Github
           </a>
@@ -80,23 +79,44 @@
       </section>
 
 
-      <!-- HOW TO USE -->
+      <!-- GETTING STARTED -->
 
-      <section id="how-to-use" class="how-to-use-section">
+      <section id="getting-started" class="getting-started-section">
         <div class="container">
-          <h2>How to use</h2>
-          <h3>Step 1 - Load the Javascript and CSS</h3>
-          <ol>
-            <li>Download and unzip the latest version of Lightbox.</li>
-            <li>Look inside the <code>js</code> folder to find <code>jquery-1.11.0.min.js</code> and <code>lightbox.min.js</code> and load both of these files. Load jQuery first.
-<pre><code class="xml"><script src="js/jquery-1.11.0.min.js"></script>
-<script src="js/lightbox.min.js"></script></code></pre>
+          <h2>Getting started</h2>
+
+          <ol class="getting-started-list">
+            <li>
+              <p><a href="https://github.com/lokesh/lightbox2/archive/master.zip">Download the latest version</a></p>
             </li>
+            <li>
+              <p>Open up the zip file and start off by taking a peek at the barebones, working example that is included in the <code>examples/</code> folder.</p>
+            </li>
+            <li>
+              <p>Ready to set Lightbox up on your page? Include the Lightbox javascript and css.</p>
+<pre><code class="xml"><script src="path/to/lightbox.js"></script></code></pre>
+<pre><code class="xml"><link href="path/to/lightbox.css" rel="stylesheet" /></script></code></pre>
+            </li>
+            <li>
+              <p>Make sure jQuery, which is required by Lightbox is included.</p>
+              <ul>
+                <li>If you already include jQuery on your page, make sure it is included before <code>lightbox.js</code>.</li>
+                <li>If you are not currently using jQuery, I've created a convience I've included a packaged version of Lightbox that includes it. It is available at <code>dist/js/lightbox-plus-jquery.js</code></li>
+              </ul>
+              
+            </li>
+          </ol>
+
+          
+
+          
+          
+          <ul>
             <li>Look inside the <code>css</code> folder to find <code>lightbox.css</code> and load it.
 <pre><code class="xml"><link href="css/lightbox.css" rel="stylesheet" /></code></pre>
             </li>
             <li>Look inside the <code>img</code> folder to find <code>close.png</code>, <code>loading.gif</code>, <code>prev.png</code>, and <code>next.png</code>. These files are used in <code>lightbox.css</code>. By default, <code>lightbox.css</code> will look for these images in a folder called <code>img</code>.</li>
-          </ol>
+          </ul>
           <h3>Step 2 - Turn it on</h3>
           <ul>
             <li>Add a <code>data-lightbox</code> attribute to any image link to activate Lightbox. For the value of the attribute, use a unique name for each image. For example:
@@ -238,24 +258,34 @@
 
     <div id="sharing" class="sharing-section">
       <a href="https://twitter.com/share" class="twitter-share-button" data-via="lokesh" data-size="large">Tweet</a>
-      <script>
-      ! function(d, s, id)
-      {
-        var js, fjs = d.getElementsByTagName(s)[0],
-          p = /^http:/.test(d.location) ? 'http' : 'https';
-        if (!d.getElementById(id))
-        {
-          js = d.createElement(s);
-          js.id = id;
-          js.src = p + '://platform.twitter.com/widgets.js';
-          fjs.parentNode.insertBefore(js, fjs);
-        }
-      }(document, 'script', 'twitter-wjs');
-      </script>
     </div>
+
+
+    <!-- LIGHTBOX PLUS JQUERY -->
 
     <script src="js/lightbox-plus-jquery.min.js"></script>
 
+    
+    <!-- SMOOTH SCROLLING -->
+
+    <script>
+      $(function() {
+        $('#nav').on('click', '.nav-item', function(event) {
+          event.preventDefault();
+          var hash = this.hash;
+          
+          $('html, body').animate({
+           scrollTop: $(hash).offset().top
+          }, 1000, function() {
+            window.location.hash = hash;
+          });
+        });
+      });
+
+    </script>
+    
+    <!-- GOOGLE ANALYTICS -->
+    
     <script>
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-2196019-1']);
@@ -269,6 +299,24 @@
       var s = document.getElementsByTagName('script')[0];
       s.parentNode.insertBefore(ga, s);
     })();
+    </script>
+
+
+    <!-- TWITTER SHARE WIDGET -->
+
+    <script>
+    ! function(d, s, id)
+    {
+      var js, fjs = d.getElementsByTagName(s)[0],
+        p = /^http:/.test(d.location) ? 'http' : 'https';
+      if (!d.getElementById(id))
+      {
+        js = d.createElement(s);
+        js.id = id;
+        js.src = p + '://platform.twitter.com/widgets.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }
+    }(document, 'script', 'twitter-wjs');
     </script>
 
   </body>

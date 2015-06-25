@@ -103,7 +103,7 @@ h3
     text-align: left
 
 p
-  margin: 0 auto 2em auto
+  margin: 0 auto 2rem auto
 
 .lead
   margin-bottom: 1.1rem
@@ -115,7 +115,7 @@ ol
 
 ul,
 ol
-  margin: 0 0 1.25em 0
+  margin: 0 0 1.25rem 0
   padding-left: 18px
 
 @media (min-width: $sm-screen)
@@ -250,12 +250,12 @@ body
     display: block
     width: 20%
 
-.nav-title
-  padding: 2px 32px 2px 0
-
 .nav-item
   display: block
   padding: 2px 32px 2px 0
+  
+a.nav-item:focus
+  outline: 0
 
 .content
   margin-left: 0
@@ -344,9 +344,9 @@ header
   border-radius: $radius
 
 
-/* -- How to use -- */    
+/* -- Getting started -- */    
 
-.how-to-use-section
+.getting-started-section
   p,
   ol,
   ul,
@@ -355,6 +355,13 @@ header
 
   li
     margin-bottom: 2rem
+    li
+      margin-bottom: 1rem
+
+.getting-started-list
+  p
+    margin-bottom: 1rem
+
 
 
 /* -- Options -- */

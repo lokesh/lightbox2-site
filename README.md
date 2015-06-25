@@ -8,7 +8,6 @@ by [Lokesh Dhakar](http://www.lokeshdhakar.com)
 
 ## Build and deploy steps
 
-- Checkout ```master```.
 - ```npm install```
 - ```bower install```
 - ```grunt build```
