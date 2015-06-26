@@ -90,34 +90,24 @@
               <p><a href="https://github.com/lokesh/lightbox2/archive/master.zip">Download the latest version</a></p>
             </li>
             <li>
-              <p>Open up the zip file and start off by taking a peek at the barebones, working example that is included in the <code>examples/</code> folder.</p>
+              <p>Open up the zip file and take a peek at the barebones, working example that is included in the <code>/examples</code> folder.</p>
             </li>
             <li>
-              <p>Ready to set Lightbox up on your page? Include the Lightbox javascript and css.</p>
+              <p>Ready to set Lightbox up on your page? Start by including the Lightbox Javascript and CSS. You can grab both these files from the <code>/dist</code> folder.</p>
 <pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;path/to/lightbox.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></code></pre>
 <pre><code class="xml">&lt;link <span class="hljs-variable">href=</span><span class="hljs-string">&quot;path/to/lightbox.css&quot;</span> <span class="hljs-variable">rel=</span><span class="hljs-string">&quot;stylesheet&quot;</span>&gt;</code></pre>
             </li>
             <li>
-              <p>Make sure jQuery, which is required by Lightbox is included.</p>
+              <p>Make sure jQuery, which is required by Lightbox, is also loaded.</p>
               <ul>
-                <li>If you already include jQuery on your page, make sure it is included before <code>lightbox.js</code>.</li>
-                <li>If you are not currently using jQuery, I&apos;ve created a convience I&apos;ve included a packaged version of Lightbox that includes it. It is available at <code>dist/js/lightbox-plus-jquery.js</code></li>
-              </ul>
-              
+                <li>If you already use jQuery on your page, make sure it is loaded before <code>lightbox.js</code>.</li>
+                <li>If you are not currently using jQuery, I&apos;ve created a packaged file that includes both Lightbox and jQuery. Include <code>dist/js/lightbox-plus-jquery.js</code> instead of <code>lightbox.js</code>.</li>
+              </ul>              
             </li>
-          </ol>
+            <li>Confirm that the four images loaded by <code>lightbox.css</code> are in the correct location. You can grab the images from the <code>/dist/images</code> folder.
+          </li></ol>
 
-          
-
-          
-          
-          <ul>
-            <li>Look inside the <code>css</code> folder to find <code>lightbox.css</code> and load it.
-<pre><code class="xml">&lt;link <span class="hljs-variable">href=</span><span class="hljs-string">&quot;css/lightbox.css&quot;</span> <span class="hljs-variable">rel=</span><span class="hljs-string">&quot;stylesheet&quot;</span>&gt;</code></pre>
-            </li>
-            <li>Look inside the <code>img</code> folder to find <code>close.png</code>, <code>loading.gif</code>, <code>prev.png</code>, and <code>next.png</code>. These files are used in <code>lightbox.css</code>. By default, <code>lightbox.css</code> will look for these images in a folder called <code>img</code>.</li>
-          </ul>
-          <h3>Step 2 - Turn it on</h3>
+          <h3>Initialize with HTML</h3>
           <ul>
             <li>Add a <code>data-lightbox</code> attribute to any image link to activate Lightbox. For the value of the attribute, use a unique name for each image. For example:
 <pre><code class="xml">&lt;a <span class="hljs-variable">href=</span><span class="hljs-string">&quot;images/image-1.jpg&quot;</span> <span class="hljs-variable">data-lightbox=</span><span class="hljs-string">&quot;image-1&quot;</span> <span class="hljs-variable">data-title=</span><span class="hljs-string">&quot;My caption&quot;</span>&gt;Image <span class="hljs-comment">#1&lt;/a&gt;</span></code></pre>
