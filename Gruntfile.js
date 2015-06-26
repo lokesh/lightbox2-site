@@ -13,6 +13,13 @@ module.exports = function(grunt) {
       },
     },
     clean: ['src/css'],
+    connect: {
+      server: {
+        options: {
+          port: 8000
+        }
+      }
+    },
     copy: {
       images: {
         files: [
@@ -73,11 +80,7 @@ module.exports = function(grunt) {
     watch: {
       sass: {
         files: ['src/sass/*.sass'],
-        tasks: ['sass'],
-      },
-      autoprefixer: {
-        files: ['src/css/screen.css'],
-        tasks: ['autoprefixer'],
+        tasks: ['sass', 'autoprefixer'],
       },
       highlight: {
         files: ['src/index.html'],
@@ -92,6 +95,7 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-ftp-deploy');
@@ -99,7 +103,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-html');  
   grunt.loadNpmTasks('grunt-sass');
 
-  grunt.registerTask('default', ['build', 'watch']);
+  grunt.registerTask('default', ['build', 'connect', 'watch']);
   grunt.registerTask('build', ['highlight', 'htmllint', 'sass','autoprefixer', 'copy', 'clean']);
   grunt.registerTask('deploy', ['ftp-deploy']);
 };
