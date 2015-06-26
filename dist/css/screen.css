@@ -925,6 +925,24 @@ header {
   .options-section td:last-child {
     padding-right: 0; }
 
+@media (max-width: 640px) {
+  .options-table thead {
+    display: none; }
+  .options-table tr {
+    display: block;
+    margin-bottom: 24px; }
+  .options-table td {
+    display: block;
+    padding: 4px 8px; }
+  .options-table td:first-child {
+    font-weight: 500; }
+  .options-table .default-row {
+    color: #777; }
+    .options-table .default-row:before {
+      content: attr(data-label);
+      float: left;
+      padding-right: 8px; } }
+
 /* -- Credits -- */
 footer {
   padding: 2rem 0;

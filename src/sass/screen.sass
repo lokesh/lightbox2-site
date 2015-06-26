@@ -374,6 +374,25 @@ header
     &:last-child
       padding-right: 0
 
+@media (max-width: $sm-screen)
+  .options-table
+    thead
+      display: none
+    tr
+      display: block
+      margin-bottom: 24px
+    td
+      display: block
+      padding: 4px 8px
+    td:first-child
+      font-weight: 500
+    .default-row
+      color: $gray
+      &:before
+        content: attr(data-label)
+        float: left
+        padding-right: 8px
+
 
 /* -- Credits -- */
 

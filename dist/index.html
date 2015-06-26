@@ -139,57 +139,61 @@
         <div class="container">
           <h2>Options</h2>
           
-          <table>
-            <tr>
-              <th>Option</th>
-              <th>Default</th>
-              <th>Description</th>
-            </tr>
-            <tr>
-              <td>alwaysShowNavOnTouchDevices</td>
-              <td>false</td>
-              <td>If true, the left and right navigation arrows which appear on mouse hover when viewing image sets will always be visible on devices which support touch.</td>
-            </tr>
-            <tr>
-              <td>fadeDuration</td>
-              <td>500</td>
-              <td>The time it takes for the Lightbox container and overlay to fade in and out, in milliseconds.</td>
-            </tr>
-            <tr>
-              <td>fitImagesInViewport</td>
-              <td>true</td>
-              <td>If true, resize images that would extend outside of the viewport so they fit neatly inside of it. This saves the user from having to scroll to see the entire image.</td>
-            </tr>
-            <tr>
-              <td>maxWidth</td>
-              <td></td>
-              <td>If set, the image height will be limited to this number, in pixels. Aspect ratio will not be maintained.</td>
-            </tr>
-            <tr>
-              <td>maxHeight</td>
-              <td></td>
-              <td>If set, the image width will be limited to this number, in pixels. Aspect ratio will not be maintained.</td>
-            </tr>
-            <tr>
-              <td>positionFromTop</td>
-              <td>50</td>
-              <td>The distance from top of viewport that the Lightbox container will appear, in pixels.</td>
-            </tr>
-            <tr>
-              <td>resizeDuration</td>
-              <td>700</td>
-              <td>The time it takes for the Lightbox container to animate its width and height when transition between different size images, in milliseconds.</td>
-            </tr>
-            <tr>
-              <td>showImageNumberLabel</td>
-              <td>true</td>
-              <td>If false, the text indicating the current image number and the total number of images in set (Ex. &quot;image 2 of 4&quot;) will be hidden.</td>
-            </tr>
-            <tr>
-              <td>wrapAround</td>
-              <td>false</td>
-              <td>If true, when a user reaches the last image in a set, the right navigation arrow will appear and they will be to continue moving forward which will take them back to the first image in the set.</td>
-            </tr>
+          <table class="options-table">
+            <thead>
+              <tr>
+                <th>Option</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>alwaysShowNavOnTouchDevices</td>
+                <td data-label="Default:" class="default-row">false</td>
+                <td>If true, the left and right navigation arrows which appear on mouse hover when viewing image sets will always be visible on devices which support touch.</td>
+              </tr>
+              <tr>
+                <td>fadeDuration</td>
+                <td data-label="Default:" class="default-row">500</td>
+                <td>The time it takes for the Lightbox container and overlay to fade in and out, in milliseconds.</td>
+              </tr>
+              <tr>
+                <td>fitImagesInViewport</td>
+                <td data-label="Default:" class="default-row">true</td>
+                <td>If true, resize images that would extend outside of the viewport so they fit neatly inside of it. This saves the user from having to scroll to see the entire image.</td>
+              </tr>
+              <tr>
+                <td>maxWidth</td>
+                <td data-label="Default:" class="default-row">&#xA0;</td>
+                <td>If set, the image height will be limited to this number, in pixels. Aspect ratio will not be maintained.</td>
+              </tr>
+              <tr>
+                <td>maxHeight</td>
+                <td data-label="Default:" class="default-row">&#xA0;</td>
+                <td>If set, the image width will be limited to this number, in pixels. Aspect ratio will not be maintained.</td>
+              </tr>
+              <tr>
+                <td>positionFromTop</td>
+                <td data-label="Default:" class="default-row">50</td>
+                <td>The distance from top of viewport that the Lightbox container will appear, in pixels.</td>
+              </tr>
+              <tr>
+                <td>resizeDuration</td>
+                <td data-label="Default:" class="default-row">700</td>
+                <td>The time it takes for the Lightbox container to animate its width and height when transition between different size images, in milliseconds.</td>
+              </tr>
+              <tr>
+                <td>showImageNumberLabel</td>
+                <td data-label="Default:" class="default-row">true</td>
+                <td>If false, the text indicating the current image number and the total number of images in set (Ex. &quot;image 2 of 4&quot;) will be hidden.</td>
+              </tr>
+              <tr>
+                <td>wrapAround</td>
+                <td data-label="Default:" class="default-row">false</td>
+                <td>If true, when a user reaches the last image in a set, the right navigation arrow will appear and they will be to continue moving forward which will take them back to the first image in the set.</td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </section>
