@@ -885,6 +885,13 @@ header {
   padding-bottom: 5rem; }
 
 /* -- Examples -- */
+.image-row {
+  text-align: center; }
+
+@media (min-width: 640px) {
+  .image-row {
+    text-align: left; } }
+
 .example-image-link {
   display: inline-block;
   padding: 2px;
@@ -924,6 +931,9 @@ header {
   .options-section th:last-child,
   .options-section td:last-child {
     padding-right: 0; }
+
+.options-code {
+  margin-bottom: 2rem; }
 
 @media (max-width: 640px) {
   .options-table thead {

@@ -327,6 +327,13 @@ header
 
 /* -- Examples -- */
 
+.image-row
+  text-align :center
+
+@media (min-width: $sm-screen)
+  .image-row
+    text-align: left
+
 .example-image-link
   display: inline-block
   padding: 2px
@@ -373,6 +380,9 @@ header
     border-bottom: 1px solid $border-color
     &:last-child
       padding-right: 0
+
+.options-code
+  margin-bottom: 2rem
 
 @media (max-width: $sm-screen)
   .options-table
