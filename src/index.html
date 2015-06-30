@@ -95,8 +95,8 @@
             </li>
             <li>
               <p>Ready to set Lightbox up on your page? Start by including the Lightbox Javascript and CSS. You can grab both these files from the <code>/dist</code> folder.</p>
-<pre><code class="xml"><script src="path/to/lightbox.js"></script></code></pre>
-<pre><code class="xml"><link href="path/to/lightbox.css" rel="stylesheet" /></script></code></pre>
+<pre><code class="xml"><script src="path/to/lightbox.js"></script>
+<link href="path/to/lightbox.css" rel="stylesheet" /></code></pre>
             </li>
             <li>
               <p>Make sure jQuery, which is required by Lightbox, is also loaded.</p>
@@ -110,7 +110,7 @@
 
           <h3>Initialize with HTML</h3>
           <ul>
-            <li>Add a <code>data-lightbox</code> attribute to any image link to activate Lightbox. For the value of the attribute, use a unique name for each image. For example:
+            <li>Add a <code>data-lightbox</code> attribute to any image link to enable Lightbox. For the value of the attribute, use a unique name for each image. For example:
 <pre><code class="xml"><a href="images/image-1.jpg" data-lightbox="image-1" data-title="My caption">Image #1</a></code></pre>
               <em>Optional:</em> Add a <code>data-title</code> attribute if you want to show a caption.
             </li>
@@ -120,6 +120,14 @@
 <a href="images/image-4.jpg" data-lightbox="roadtrip">Image #4</a></code></pre>
             </li>
           </ul>
+          <h3>Set options with Javascript</h3>
+          <p>If you want to change any of the default options, use the option method.</p>
+<pre><code class="xml"><script>
+    lightbox.option({
+      'resizeDuration': 200,
+      'wrapAround': true
+    })
+</script></code></pre>
         </div>
       </section>
 
