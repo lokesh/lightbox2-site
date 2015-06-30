@@ -3,14 +3,6 @@
   "version": "1.0.1",
   "author": "Lokesh Dhakar",
   "description": "Lightbox2 site, which includes demos, usage instructions, and troubleshooting information. Lives at lokeshdhakar.com/projects/lightbox2/.",
-  "keywords": [
-    "lightbox",
-    "lightbox2",
-    "overlay",
-    "gallery",
-    "slideshow",
-    "images"
-  ],
   "homepage": "http://lokeshdhakar.com/projects/lightbox2/",
   "repository": {
     "type": "git",

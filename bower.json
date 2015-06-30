@@ -6,15 +6,7 @@
   ],
   "description": "Lightbox2 site, which includes demos, usage instructions, and troubleshooting information. Lives at lokeshdhakar.com/projects/lightbox2/.",
   "main": [
-    "./index.html"
-  ],
-  "keywords": [
-    "lightbox",
-    "lightbox2",
-    "overlay",
-    "gallery",
-    "slideshow",
-    "images"
+    "./dist/index.html"
   ],
   "ignore": [
     "**/.*",
