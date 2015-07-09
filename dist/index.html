@@ -94,16 +94,22 @@
               <p>Open up the zip file and take a peek at the barebones, working example that is included in the <code>/examples</code> folder.</p>
             </li>
             <li>
-              <p>Ready to set Lightbox up on your page? Start by including the Lightbox Javascript and CSS. You can grab both these files from the <code>/dist</code> folder.</p>
-<pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;path/to/lightbox.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;path/to/lightbox.css&quot;</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">&quot;stylesheet&quot;</span>&gt;</span></code></pre>
+              <p>Ready to set Lightbox up on your page? Start by including the Lightbox CSS and Javascript. You can grab both these files from the <code>/dist</code> folder.</p>
+              <ul>
+                <li>Include the CSS at the top of your page in your <code>&lt;head&gt;</code> tag:
+<pre><code>&lt;link <span class="hljs-variable">href=</span><span class="hljs-string">&quot;path/to/lightbox.css&quot;</span> <span class="hljs-variable">rel=</span><span class="hljs-string">&quot;stylesheet&quot;</span>&gt;</code></pre>
+</li>
+<li>Include the Javascript at the bottom of your page before the closing <code>&lt;/body&gt;</code> tag:
+<pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;path/to/lightbox.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></code></pre>
+</li>
+</ul>
             </li>
             <li>
               <p>Make sure jQuery, which is required by Lightbox, is also loaded.</p>
               <ul>
                 <li>If you already use jQuery on your page, make sure it is loaded before <code>lightbox.js</code>.</li>
                 <li>If you are not currently using jQuery, I&apos;ve created a packaged file that includes both Lightbox and jQuery. Include <code>dist/js/lightbox-plus-jquery.js</code> instead of <code>lightbox.js</code>.</li>
-              </ul>              
+              </ul>
             </li>
             <li>Confirm that the four images loaded by <code>lightbox.css</code> are in the correct location. You can grab the images from the <code>/dist/images</code> folder.
           </li></ol>
@@ -137,7 +143,7 @@
       <span class="hljs-symbol">&apos;wrapAround&apos;</span>: <span class="hljs-literal">true</span>
     })
 </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></code></pre>
-          
+
           <table class="options-table">
             <thead>
               <tr>
@@ -216,7 +222,7 @@
           </ul>
         </div>
       </section>
-      
+
 
       <!-- LICENSE -->
 
@@ -227,7 +233,7 @@
           <ul>
             <li><strong>100% Free.</strong> Lightbox is free to use in both commercial and non-commercial work.</li>
             <li><strong>Attribution is required.</strong>This means you must leave my name, my homepage link, and the license info intact. None of these items have to be user-facing and can remain within the code.</li>
-          </ul>            
+          </ul>
         </div>
       </section>
 
@@ -245,13 +251,13 @@
 
           <h3>Found a bug?</h3>
           <p>If you find a bug, follow the instructions in the <a href="https://github.com/lokesh/lightbox2/blob/master/CONTRIBUTING.md#found-a-bug">Contribution Guildelines</a> to report the issue.</p>
-          
+
         </div>
       </section>
-     
 
-      <!-- FOOTER --> 
-      
+
+      <!-- FOOTER -->
+
       <footer>
         <div class="container">
           <p>
@@ -273,7 +279,7 @@
 
     <script src="js/lightbox-plus-jquery.min.js"></script>
 
-    
+
     <!-- SMOOTH SCROLLING -->
 
     <script>
@@ -281,7 +287,7 @@
         $('#nav').on('click', '.nav-item', function(event) {
           event.preventDefault();
           var hash = this.hash;
-          
+
           $('html, body').animate({
            scrollTop: $(hash).offset().top
           }, 1000, function() {
@@ -291,9 +297,9 @@
       });
 
     </script>
-    
+
     <!-- GOOGLE ANALYTICS -->
-    
+
     <script>
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-2196019-1']);
