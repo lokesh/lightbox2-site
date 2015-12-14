@@ -935,6 +935,10 @@ header {
 .options-code {
   margin-bottom: 2rem; }
 
+.options-table .default-row {
+  min-width: 10rem;
+  max-width: 100%; }
+
 @media (max-width: 640px) {
   .options-table thead {
     display: none; }
