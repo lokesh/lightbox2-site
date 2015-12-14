@@ -51,7 +51,8 @@ module.exports = function(grunt) {
       build: {
         auth: {
           host: '<%- host_config.host %>',
-          port: '<%- host_config.port %>'
+          port: '<%- host_config.port %>',
+          authKey: 'login'
         },
         src: './dist',
         dest: '<%- host_config.directory %>',
@@ -64,7 +65,7 @@ module.exports = function(grunt) {
       task: {
         files: {
           'dist/index.html': ['src/index.html']
-        }    
+        }
       }
     },
     htmllint: {
@@ -100,7 +101,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-ftp-deploy');
   grunt.loadNpmTasks('grunt-highlight');
-  grunt.loadNpmTasks('grunt-html');  
+  grunt.loadNpmTasks('grunt-html');
   grunt.loadNpmTasks('grunt-sass');
 
   grunt.registerTask('default', ['build', 'connect', 'watch']);
