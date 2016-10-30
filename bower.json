@@ -15,5 +15,7 @@
   ],
   "dependencies": {
     "lightbox2": "latest"
-  }
+  },
+  "private": true,
+  "license": "UNLICENSED"
 }
