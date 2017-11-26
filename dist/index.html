@@ -89,8 +89,8 @@
             <li>
               <p><a href="https://github.com/lokesh/lightbox2/archive/master.zip">Download the latest version as a zip file</a><br>
               Or use a package manager...<br>
-              Bower: <code>bower install lightbox2 --save</code><br>
               NPM: <code>npm install lightbox2 --save</code></p>
+              Bower: <code>bower install lightbox --save</code><br>
             </li>
             <li>
               <p>Open up the zip file and take a peek at the barebones, working example that is included in the <code>/examples</code> folder.</p>
@@ -118,11 +118,15 @@
 
           <h3>Initialize with HTML</h3>
           <ul>
-            <li>Add a <code>data-lightbox</code> attribute to any image link to enable Lightbox. For the value of the attribute, use a unique name for each image. For example:
+            <li><strong>Single images.</strong> Add a <code>data-lightbox</code> attribute to any image link to enable Lightbox. For the value of the attribute, use a unique name for each image. For example:
 <pre><code class="xml">&lt;a href=<span class="hljs-string">&quot;images/image-1.jpg&quot;</span> <span class="hljs-built_in">data</span><span class="hljs-params">-lightbox</span>=<span class="hljs-string">&quot;image-1&quot;</span> <span class="hljs-built_in">data</span><span class="hljs-params">-title</span>=<span class="hljs-string">&quot;My caption&quot;</span>&gt;Image #1&lt;/a&gt;</code></pre>
-              <em>Optional:</em> Add a <code>data-title</code> attribute if you want to show a caption.
+              <em>Optional:</em>
+              <ul>
+                <li>Add a <code>data-title</code> attribute if you want to show a caption.</li>
+                <li>Add a <code>data-alt</code> attribute if you want to set the alt attribute of the linked image.</li>
+              </ul>
             </li>
-            <li>If you have a group of related images that you would like to combine into a set, use the same <code>data-lightbox</code> attribute value for all of the images. For example:
+            <li><strong>Image sets.</strong> If you have a group of related images that you would like to combine into a set, use the same <code>data-lightbox</code> attribute value for all of the images. For example:
 <pre><code class="xml">&lt;<span class="hljs-keyword">a</span> href=<span class="hljs-string">&quot;images/image-2.jpg&quot;</span> data-lightbox=<span class="hljs-string">&quot;roadtrip&quot;</span>&gt;Image <span class="hljs-comment">#2&lt;/a&gt;</span>
 &lt;<span class="hljs-keyword">a</span> href=<span class="hljs-string">&quot;images/image-3.jpg&quot;</span> data-lightbox=<span class="hljs-string">&quot;roadtrip&quot;</span>&gt;Image <span class="hljs-comment">#3&lt;/a&gt;</span>
 &lt;<span class="hljs-keyword">a</span> href=<span class="hljs-string">&quot;images/image-4.jpg&quot;</span> data-lightbox=<span class="hljs-string">&quot;roadtrip&quot;</span>&gt;Image <span class="hljs-comment">#4&lt;/a&gt;</span></code></pre>

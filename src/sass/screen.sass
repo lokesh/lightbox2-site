@@ -282,8 +282,6 @@ section
   .container
     padding: 0 32px
 
-
-
 .row
   // pie-clearfix
   &:after
@@ -309,6 +307,11 @@ header
   width: 45px
   height: 45px
   margin-right: 0.5rem
+
+@media (min-width: $sm-screen)
+  .picture-icon
+    width: 59px
+    height: 59px
 
 .logo-credit
   display: block
@@ -360,10 +363,13 @@ header
   pre
     text-align: left
 
+  pre
+    margin-top: 0.5rem
+
   li
     margin-bottom: 2rem
     li
-      margin-bottom: 1rem
+      margin-bottom: 0.5rem
 
 .getting-started-list
   p

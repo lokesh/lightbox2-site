@@ -33,14 +33,14 @@ module.exports = function(grunt) {
       },
       jquery: {
         files: {
-            'dist/js/jquery.min.js': 'bower_components/jquery/dist/jquery.min.js'
+            'dist/js/jquery.min.js': 'node_modules/jquery/dist/jquery.min.js'
         }
       },
       lightbox2: {
         files: [
           {
             expand: true,
-            cwd: 'bower_components/lightbox2/dist',
+            cwd: 'node_modules/lightbox2/dist',
             src: ['**'],
             dest: 'dist/'
           }

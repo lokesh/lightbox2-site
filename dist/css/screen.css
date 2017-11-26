@@ -870,6 +870,11 @@ header {
   height: 45px;
   margin-right: 0.5rem; }
 
+@media (min-width: 640px) {
+  .picture-icon {
+    width: 59px;
+    height: 59px; } }
+
 .logo-credit {
   display: block;
   margin-bottom: 1em;
@@ -912,10 +917,13 @@ header {
 .getting-started-section pre {
   text-align: left; }
 
+.getting-started-section pre {
+  margin-top: 0.5rem; }
+
 .getting-started-section li {
   margin-bottom: 2rem; }
   .getting-started-section li li {
-    margin-bottom: 1rem; }
+    margin-bottom: 0.5rem; }
 
 .getting-started-list p {
   margin-bottom: 1rem; }

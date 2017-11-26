@@ -89,8 +89,8 @@
             <li>
               <p><a href="https://github.com/lokesh/lightbox2/archive/master.zip">Download the latest version as a zip file</a><br />
               Or use a package manager...<br />
-              Bower: <code>bower install lightbox2 --save</code><br />
               NPM: <code>npm install lightbox2 --save</code></p>
+              Bower: <code>bower install lightbox --save</code><br />
             </li>
             <li>
               <p>Open up the zip file and take a peek at the barebones, working example that is included in the <code>/examples</code> folder.</p>
@@ -118,11 +118,15 @@
 
           <h3>Initialize with HTML</h3>
           <ul>
-            <li>Add a <code>data-lightbox</code> attribute to any image link to enable Lightbox. For the value of the attribute, use a unique name for each image. For example:
+            <li><strong>Single images.</strong> Add a <code>data-lightbox</code> attribute to any image link to enable Lightbox. For the value of the attribute, use a unique name for each image. For example:
 <pre><code class="xml"><a href="images/image-1.jpg" data-lightbox="image-1" data-title="My caption">Image #1</a></code></pre>
-              <em>Optional:</em> Add a <code>data-title</code> attribute if you want to show a caption.
+              <em>Optional:</em>
+              <ul>
+                <li>Add a <code>data-title</code> attribute if you want to show a caption.</li>
+                <li>Add a <code>data-alt</code> attribute if you want to set the alt attribute of the linked image.</li>
+              </ul>
             </li>
-            <li>If you have a group of related images that you would like to combine into a set, use the same <code>data-lightbox</code> attribute value for all of the images. For example:
+            <li><strong>Image sets.</strong> If you have a group of related images that you would like to combine into a set, use the same <code>data-lightbox</code> attribute value for all of the images. For example:
 <pre><code class="xml"><a href="images/image-2.jpg" data-lightbox="roadtrip">Image #2</a>
 <a href="images/image-3.jpg" data-lightbox="roadtrip">Image #3</a>
 <a href="images/image-4.jpg" data-lightbox="roadtrip">Image #4</a></code></pre>
