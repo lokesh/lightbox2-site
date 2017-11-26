@@ -99,7 +99,7 @@
               <p>Ready to set Lightbox up on your page? Start by including the Lightbox CSS and Javascript. You can grab both these files from the <code>/dist</code> folder.</p>
               <ul>
                 <li>Include the CSS at the top of your page in your <code>&lt;head&gt;</code> tag:
-<pre><code><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;path/to/lightbox.css&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span>&gt;</span></code></pre>
+<pre><code>&lt;link <span class="hljs-attribute">href</span>=<span class="hljs-string">&quot;path/to/lightbox.css&quot;</span> <span class="hljs-attribute">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span>&gt;</code></pre>
 </li>
 <li>Include the Javascript at the bottom of your page before the closing <code>&lt;/body&gt;</code> tag:
 <pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;path/to/lightbox.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
@@ -119,7 +119,7 @@
           <h3>Initialize with HTML</h3>
           <ul>
             <li>Add a <code>data-lightbox</code> attribute to any image link to enable Lightbox. For the value of the attribute, use a unique name for each image. For example:
-<pre><code class="xml">&lt;a href=<span class="hljs-string">&quot;images/image-1.jpg&quot;</span> <span class="hljs-built_in">data</span><span class="hljs-attr">-lightbox</span>=<span class="hljs-string">&quot;image-1&quot;</span> <span class="hljs-built_in">data</span><span class="hljs-attr">-title</span>=<span class="hljs-string">&quot;My caption&quot;</span>&gt;Image #1&lt;/a&gt;</code></pre>
+<pre><code class="xml">&lt;a href=<span class="hljs-string">&quot;images/image-1.jpg&quot;</span> <span class="hljs-built_in">data</span><span class="hljs-params">-lightbox</span>=<span class="hljs-string">&quot;image-1&quot;</span> <span class="hljs-built_in">data</span><span class="hljs-params">-title</span>=<span class="hljs-string">&quot;My caption&quot;</span>&gt;Image #1&lt;/a&gt;</code></pre>
               <em>Optional:</em> Add a <code>data-title</code> attribute if you want to show a caption.
             </li>
             <li>If you have a group of related images that you would like to combine into a set, use the same <code>data-lightbox</code> attribute value for all of the images. For example:
@@ -188,12 +188,12 @@
               <tr>
                 <td>maxWidth</td>
                 <td data-label="Default:" class="default-row">&#xA0;</td>
-                <td>If set, the image height will be limited to this number, in pixels. Aspect ratio will not be maintained.</td>
+                <td>If set, the image width will be limited to this number, in pixels. Aspect ratio will not be maintained.</td>
               </tr>
               <tr>
                 <td>maxHeight</td>
                 <td data-label="Default:" class="default-row">&#xA0;</td>
-                <td>If set, the image width will be limited to this number, in pixels. Aspect ratio will not be maintained.</td>
+                <td>If set, the image height will be limited to this number, in pixels. Aspect ratio will not be maintained.</td>
               </tr>
               <tr>
                 <td>positionFromTop</td>
