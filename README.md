@@ -9,6 +9,5 @@ by [Lokesh Dhakar](http://www.lokeshdhakar.com)
 ## Build and deploy steps
 
 - ```npm install```
-- ```bower install```
 - ```grunt build```
 - ```grunt deploy```
