@@ -6,8 +6,11 @@ The Lightbox2 script repository is located at [https://github.com/lokesh/lightbo
 
 by [Lokesh Dhakar](http://www.lokeshdhakar.com)
 
-## Build and deploy steps
+
+## Maintainer notes
+
+### Build and deploy steps
 
 - ```npm install```
 - ```grunt build```
-- ```grunt deploy```
+- ```grunt deploy```: This is busted. Next time an update is needed, replace grunt ftp package.

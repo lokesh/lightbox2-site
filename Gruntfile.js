@@ -54,6 +54,7 @@ module.exports = function(grunt) {
           port: '<%- host_config.port %>',
           authKey: 'login'
         },
+        silent: false,
         src: './dist',
         dest: '<%- host_config.directory %>',
         exclusions: [

@@ -15,7 +15,7 @@
     "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
-    "grunt-ftp-deploy": "^0.1.10",
+    "grunt-ftp-deploy": "^0.2.0",
     "grunt-highlight": "0.0.1",
     "grunt-html": "^8.0.2",
     "grunt-sass": "^1.0.0"
