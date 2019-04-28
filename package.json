@@ -1,6 +1,6 @@
 {
   "name": "lightbox2-site",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Lokesh Dhakar",
   "description": "Lightbox2 site, which includes demos, usage instructions, and troubleshooting information. Lives at lokeshdhakar.com/projects/lightbox2/.",
   "homepage": "http://lokeshdhakar.com/projects/lightbox2/",
@@ -9,7 +9,7 @@
     "url": "https://github.com/lokesh/lightbox2-site.git"
   },
   "devDependencies": {
-    "grunt": "^1.0.1",
+    "grunt": "^1.0.4",
     "grunt-autoprefixer": "^3.0.3",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-connect": "^1.0.2",
@@ -28,6 +28,6 @@
   ],
   "dependencies": {
     "jquery": "^3.2.1",
-    "lightbox2": "^2.10.0"
+    "lightbox2": "^2.11.0"
   }
 }
