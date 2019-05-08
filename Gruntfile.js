@@ -2,16 +2,6 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     host_config: grunt.file.readJSON('.host_config'),
-    autoprefixer: {
-      options: {
-         browsers: ['last 2 versions']
-      },
-      dist: {
-        files: {
-          'dist/css/screen.css': 'src/css/screen.css'
-        }
-      },
-    },
     clean: ['src/css'],
     connect: {
       server: {
@@ -69,33 +59,25 @@ module.exports = function(grunt) {
         }
       }
     },
-    htmllint: {
-      all: ['dist/index.html']
-    },
     sass: {
       dist: {
         files: {
-          'src/css/screen.css' : 'src/sass/screen.sass'
+          'dist/css/screen.css' : 'src/sass/screen.sass'
         }
       }
     },
     watch: {
       sass: {
         files: ['src/sass/*.sass'],
-        tasks: ['sass', 'autoprefixer'],
+        tasks: ['sass'],
       },
       highlight: {
         files: ['src/index.html'],
         tasks: ['highlight'],
       },
-      htmllint: {
-        files: ['dist/index.html'],
-        tasks: ['htmllint'],
-      }
     }
   });
 
-  grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-copy');
@@ -106,6 +88,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sass');
 
   grunt.registerTask('default', ['build', 'connect', 'watch']);
-  grunt.registerTask('build', ['highlight', 'htmllint', 'sass','autoprefixer', 'copy', 'clean']);
+  grunt.registerTask('build', ['highlight', 'sass', 'copy', 'clean']);
   grunt.registerTask('deploy', ['ftp-deploy']);
 };
