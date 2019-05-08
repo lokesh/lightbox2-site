@@ -12,5 +12,5 @@ by [Lokesh Dhakar](http://www.lokeshdhakar.com)
 ### Build and deploy steps
 
 - ```npm install```
-- ```grunt build```
-- ```grunt deploy```: This is busted. Next time an update is needed, replace grunt ftp package.
+- ```npm run build```
+- ```npm run  deploy```
