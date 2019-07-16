@@ -1,7 +1,4 @@
-bower_components
 node_modules
-
-.sass-cache
 
 .host*
 .ftp*

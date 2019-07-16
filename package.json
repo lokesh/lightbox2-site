@@ -1,6 +1,6 @@
 {
   "name": "lightbox2-site",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "author": "Lokesh Dhakar",
   "description": "Lightbox2 site, which includes demos, usage instructions, and troubleshooting information. Lives at lokeshdhakar.com/projects/lightbox2/.",
   "homepage": "http://lokeshdhakar.com/projects/lightbox2/",
@@ -10,14 +10,7 @@
   },
   "devDependencies": {
     "ftp-deploy": "^2.3.3",
-    "grunt": "^1.0.4",
-    "grunt-contrib-clean": "^1.0.0",
-    "grunt-contrib-connect": "^1.0.2",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-highlight": "0.0.1",
-    "grunt-html": "^8.0.2",
-    "grunt-sass": "^1.0.0"
+    "http-server": "^0.11.1"
   },
   "private": true,
   "licenses": [
@@ -26,8 +19,7 @@
     }
   ],
   "scripts": {
-    "dev": "grunt",
-    "build": "grunt build",
+    "dev": "http-server",
     "deploy": "node ./build/deploy.js"
   },
   "dependencies": {
