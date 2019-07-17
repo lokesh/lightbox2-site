@@ -6,7 +6,7 @@
   --primary-color: #fc4c02;
   --secondary-color: #f68727;
   --muted-color: #999;
-  --link-color: #05f;
+  --link-color: #17f;
   --code-color: var(--primary-color);
   --code-bg-color: #fff;
   
@@ -344,9 +344,10 @@ header {
     height: 59px;
   }
 }
+
 .logo-credit {
   display: block;
-  margin-bottom: 1em;
+  margin-bottom: 0.2em;
   color: var(--muted-color);
   font-weight: var(--bold);
 }
@@ -354,8 +355,7 @@ header {
 @media (min-width: 640px) {
   .logo-credit {
     position: relative;
-    top: -3px;
-    padding-left: 71px;
+    top: -6px;
   }
 }
 .primary-actions {
