@@ -11,9 +11,9 @@
 
     <link rel="shortcut icon" href="images/favicon.png">
 
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css">
     <link rel="stylesheet" href="css/screen.css">
+    <link rel="stylesheet" href="css/prism.css">
 
 
   </head>
@@ -101,10 +101,10 @@
               <p>Ready to set Lightbox up on your page? Start by including the Lightbox CSS and Javascript. You can grab both these files from the <code>/dist</code> folder.</p>
               <ul>
                 <li>Include the CSS at the top of your page in your <code>&lt;head&gt;</code> tag:
-<pre><code><link href="path/to/lightbox.css" rel="stylesheet" /></code></pre>
+<pre><code class="prism language-xml"><!--<link href="path/to/lightbox.css" rel="stylesheet" />--></code></pre>
 </li>
 <li>Include the Javascript at the bottom of your page before the closing <code>&lt;/body&gt;</code> tag:
-<pre><code class="xml"><script src="path/to/lightbox.js"></script></code></pre>
+<pre><code class="prism language-xml"><!--<script src="path/to/lightbox.js"></script>--></code></pre>
 </li>
 </ul>
             </li>
@@ -121,7 +121,7 @@
           <h3>Initialize with HTML</h3>
           <ul>
             <li><strong>Single images.</strong> Add a <code>data-lightbox</code> attribute to any image link to enable Lightbox. For the value of the attribute, use a unique name for each image. For example:
-<pre><code class="xml"><a href="images/image-1.jpg" data-lightbox="image-1" data-title="My caption">Image #1</a></code></pre>
+<pre><code class="prism language-xml"><!--<a href="images/image-1.jpg" data-lightbox="image-1" data-title="My caption">Image #1</a>--></code></pre>
               <em>Optional:</em>
               <ul>
                 <li>Add a <code>data-title</code> attribute if you want to show a caption.</li>
@@ -129,9 +129,9 @@
               </ul>
             </li>
             <li><strong>Image sets.</strong> If you have a group of related images that you would like to combine into a set, use the same <code>data-lightbox</code> attribute value for all of the images. For example:
-<pre><code class="xml"><a href="images/image-2.jpg" data-lightbox="roadtrip">Image #2</a>
+<pre><code class="prism language-xml"><!--<a href="images/image-2.jpg" data-lightbox="roadtrip">Image #2</a>
 <a href="images/image-3.jpg" data-lightbox="roadtrip">Image #3</a>
-<a href="images/image-4.jpg" data-lightbox="roadtrip">Image #4</a></code></pre>
+<a href="images/image-4.jpg" data-lightbox="roadtrip">Image #4</a>--></code></pre>
             </li>
           </ul>
         </div>
@@ -145,12 +145,12 @@
           <h2>Options</h2>
 
           <p>If you want to change any of the default options, call the option method.</p>
-<pre class="options-code"><code class="xml"><script>
+<pre class="options-code"><code class="prism language-javascript"><!--<script>
     lightbox.option({
       'resizeDuration': 200,
       'wrapAround': true
     })
-</script></code></pre>
+</script>--></code></pre>
 
           <table class="options-table">
             <thead>
@@ -292,8 +292,10 @@
 
     </div><!-- .content -->
 
-    <!-- LIGHTBOX PLUS JQUERY -->
+    <!-- SCRIPTS -->
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/plugins/unescaped-markup/prism-unescaped-markup.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox-plus-jquery.min.js"></script>
 
 
