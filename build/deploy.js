@@ -10,7 +10,7 @@ var config = {
     password: host.password,
     host: host.host,
     port: host.port,
-    localRoot: parentDir + "/dist",
+    localRoot: parentDir,
     remoteRoot: host.directory,
 
     // include: ['*', '**/*'],      // this would upload everything except dot files
