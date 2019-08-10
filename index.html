@@ -19,14 +19,18 @@
   </head>
   <body>
 
-    <nav id="nav" class="nav">
-      <a href="#examples" class="nav-item">Examples</a>
-      <a href="#getting-started" class="nav-item">Getting started</a>
-      <a href="#options" class="nav-item">Options</a>
-      <a href="#browser-support" class="nav-item">Browser support</a>
-      <a href="#license" class="nav-item">License</a>
-      <a href="#help" class="nav-item">Help</a>
-    </nav>
+  <div class="page">
+
+    <div class="sidebar">
+      <nav id="nav" class="nav">
+        <a href="#examples" class="nav-item">Examples</a>
+        <a href="#getting-started" class="nav-item">Getting started</a>
+        <a href="#options" class="nav-item">Options</a>
+        <a href="#browser-support" class="nav-item">Browser support</a>
+        <a href="#license" class="nav-item">License</a>
+        <a href="#help" class="nav-item">Help</a>
+      </nav>
+    </div>
 
     <div class="content">
 
@@ -34,24 +38,22 @@
       <!-- HEADER -->
 
       <header id="download">
-        <div class="container">
-          <h1 class="logo">
+        <h1 class="logo">
           <img src="images/picture.svg" class="picture-icon" alt="Icon indicating an image" />Lightbox
         </h1>
-          <a href="https://lokeshdhakar.com" class="logo-credit">by Lokesh Dhakar</a>
-          <p class="lead">
-            The original lightbox script.
-            <br />Eight years later &mdash; still going strong!
-          </p>
+        <a href="https://lokeshdhakar.com" class="logo-credit">by Lokesh Dhakar</a>
+        <p class="lead">
+          The original lightbox script.
+          <br />Eight years later &mdash; still going strong!
+        </p>
 
-          <div class="primary-actions">
-            <a href="https://github.com/lokesh/lightbox2/archive/master.zip" class="button">
-              Download
-            </a>
-            <a href="https://github.com/lokesh/lightbox2/" class="button">
+        <div class="primary-actions">
+          <a href="https://github.com/lokesh/lightbox2/archive/master.zip" class="button">
+            Download
+          </a>
+          <a href="https://github.com/lokesh/lightbox2/" class="button">
             View on Github
           </a>
-          </div>
         </div>
       </header>
 
@@ -59,23 +61,20 @@
       <!-- EXAMPLES -->
 
       <section id="examples" class="examples-section">
-        <div class="container">
+        <h2>Examples</h2>
+        <h3>Two individual images</h3>
+        <div class="image-row">
+          <a class="example-image-link" href="images/image-1.jpg" data-lightbox="example-1"><img class="example-image" src="images/thumb-1.jpg" alt="Girl looking out people on beach" /></a>
+          <a class="example-image-link" href="images/image-2.jpg" data-lightbox="example-2" data-title="Optional caption."><img class="example-image" src="images/thumb-2.jpg" alt="Two men in bicycle jerseys sitting outside at table having coffee" /></a>
+        </div>
 
-          <h2>Examples</h2>
-          <h3>Two individual images</h3>
-          <div class="image-row">
-            <a class="example-image-link" href="images/image-1.jpg" data-lightbox="example-1"><img class="example-image" src="images/thumb-1.jpg" alt="Girl looking out people on beach" /></a>
-            <a class="example-image-link" href="images/image-2.jpg" data-lightbox="example-2" data-title="Optional caption."><img class="example-image" src="images/thumb-2.jpg" alt="Two men in bicycle jerseys sitting outside at table having coffee" /></a>
-          </div>
-          <hr />
-          <h3 style="clear: both;">Four image set</h3>
-          <div class="image-row">
-            <div class="image-set">
-              <a class="example-image-link" href="images/image-3.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="images/thumb-3.jpg" alt="Golden Gate Bridge with San Francisco in distance" /></a>
-              <a class="example-image-link" href="images/image-4.jpg" data-lightbox="example-set" data-title="Or press the right arrow on your keyboard."><img class="example-image" src="images/thumb-4.jpg" alt="Forest with mountains behind" /></a>
-              <a class="example-image-link" href="images/image-5.jpg" data-lightbox="example-set" data-title="The next image in the set is preloaded as you're viewing."><img class="example-image" src="images/thumb-5.jpg" alt="Bicyclist looking out over hill at ocean" /></a>
-              <a class="example-image-link" href="images/image-6.jpg" data-lightbox="example-set" data-title="Click anywhere outside the image or the X to the right to close."><img class="example-image" src="images/thumb-6.jpg" alt="Small lighthouse at bottom with ocean behind" /></a>
-            </div>
+        <h3 style="clear: both;">Four image set</h3>
+        <div class="image-row">
+          <div class="image-set">
+            <a class="example-image-link" href="images/image-3.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="images/thumb-3.jpg" alt="Golden Gate Bridge with San Francisco in distance" /></a>
+            <a class="example-image-link" href="images/image-4.jpg" data-lightbox="example-set" data-title="Or press the right arrow on your keyboard."><img class="example-image" src="images/thumb-4.jpg" alt="Forest with mountains behind" /></a>
+            <a class="example-image-link" href="images/image-5.jpg" data-lightbox="example-set" data-title="The next image in the set is preloaded as you're viewing."><img class="example-image" src="images/thumb-5.jpg" alt="Bicyclist looking out over hill at ocean" /></a>
+            <a class="example-image-link" href="images/image-6.jpg" data-lightbox="example-set" data-title="Click anywhere outside the image or the X to the right to close."><img class="example-image" src="images/thumb-6.jpg" alt="Small lighthouse at bottom with ocean behind" /></a>
           </div>
         </div>
       </section>
@@ -84,23 +83,22 @@
       <!-- GETTING STARTED -->
 
       <section id="getting-started" class="getting-started-section">
-        <div class="container">
-          <h2>Getting started</h2>
+        <h2>Getting started</h2>
 
-          <ol class="getting-started-list">
-            <li>
-              <p><a href="https://github.com/lokesh/lightbox2/archive/master.zip">Download the latest version as a zip file</a><br />
-              Or use a package manager...<br />
-              NPM: <code>npm install lightbox2 --save</code></p>
-              Bower: <code>bower install lightbox --save</code><br />
-            </li>
-            <li>
-              <p>Open up the zip file and take a peek at the barebones, working example that is included in the <code>/examples</code> folder.</p>
-            </li>
-            <li>
-              <p>Ready to set Lightbox up on your page? Start by including the Lightbox CSS and Javascript. You can grab both these files from the <code>/dist</code> folder.</p>
-              <ul>
-                <li>Include the CSS at the top of your page in your <code>&lt;head&gt;</code> tag:
+        <ol class="getting-started-list">
+          <li>
+            <p><a href="https://github.com/lokesh/lightbox2/archive/master.zip">Download the latest version as a zip file</a><br />
+            Or use a package manager...<br />
+            NPM: <code>npm install lightbox2 --save</code></p>
+            Bower: <code>bower install lightbox --save</code><br />
+          </li>
+          <li>
+            <p>Open up the zip file and take a peek at the barebones, working example that is included in the <code>/examples</code> folder.</p>
+          </li>
+          <li>
+            <p>Ready to set Lightbox up on your page? Start by including the Lightbox CSS and Javascript. You can grab both these files from the <code>/dist</code> folder.</p>
+            <ul>
+              <li>Include the CSS at the top of your page in your <code>&lt;head&gt;</code> tag:
 <pre><code class="prism language-xml"><!--<link href="path/to/lightbox.css" rel="stylesheet" />--></code></pre>
 </li>
 <li>Include the Javascript at the bottom of your page before the closing <code>&lt;/body&gt;</code> tag:
@@ -132,19 +130,17 @@
 <pre><code class="prism language-xml"><!--<a href="images/image-2.jpg" data-lightbox="roadtrip">Image #2</a>
 <a href="images/image-3.jpg" data-lightbox="roadtrip">Image #3</a>
 <a href="images/image-4.jpg" data-lightbox="roadtrip">Image #4</a>--></code></pre>
-            </li>
-          </ul>
-        </div>
+          </li>
+        </ul>
       </section>
 
 
       <!-- OPTIONS -->
 
       <section id="options" class="options-section">
-        <div class="container">
-          <h2>Options</h2>
+        <h2>Options</h2>
 
-          <p>If you want to change any of the default options, call the option method.</p>
+        <p>If you want to change any of the default options, call the option method.</p>
 <pre class="options-code"><code class="prism language-javascript"><!--<script>
     lightbox.option({
       'resizeDuration': 200,
@@ -152,145 +148,137 @@
     })
 </script>--></code></pre>
 
-          <table class="options-table">
-            <thead>
-              <tr>
-                <th>Option</th>
-                <th>Default</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>alwaysShowNavOnTouchDevices</td>
-                <td data-label="Default:" class="default-row">false</td>
-                <td>If true, the left and right navigation arrows which appear on mouse hover when viewing image sets will always be visible on devices which support touch.</td>
-              </tr>
-              <tr>
-                <td>albumLabel</td>
-                <td data-label="Default:" class="default-row">"Image %1 of %2"</td>
-                <td>The text displayed below the caption when viewing an image set. The default text shows the current image number and the total number of images in the set.</td>
-              </tr>
-              <tr>
-                <td>disableScrolling</td>
-                <td data-label="Default:" class="default-row">false</td>
-                <td>If true, prevent the page from scrolling while Lightbox is open. This works by settings overflow hidden on the body.</td>
-              </tr>
-              <tr>
-                <td>fadeDuration</td>
-                <td data-label="Default:" class="default-row">600</td>
-                <td>The time it takes for the Lightbox container and overlay to fade in and out, in milliseconds.</td>
-              </tr>
-              <tr>
-                <td>fitImagesInViewport</td>
-                <td data-label="Default:" class="default-row">true</td>
-                <td>If true, resize images that would extend outside of the viewport so they fit neatly inside of it. This saves the user from having to scroll to see the entire image.</td>
-              </tr>
-              <tr>
-                <td>imageFadeDuration</td>
-                <td data-label="Default:" class="default-row">600</td>
-                <td>The time it takes for the image to fade in once loaded, in milliseconds.</td>
-              </tr>
-              <tr>
-                <td>maxWidth</td>
-                <td data-label="Default:" class="default-row">&nbsp;</td>
-                <td>If set, the image width will be limited to this number, in pixels. Aspect ratio will not be maintained.</td>
-              </tr>
-              <tr>
-                <td>maxHeight</td>
-                <td data-label="Default:" class="default-row">&nbsp;</td>
-                <td>If set, the image height will be limited to this number, in pixels. Aspect ratio will not be maintained.</td>
-              </tr>
-              <tr>
-                <td>positionFromTop</td>
-                <td data-label="Default:" class="default-row">50</td>
-                <td>The distance from top of viewport that the Lightbox container will appear, in pixels.</td>
-              </tr>
-              <tr>
-                <td>resizeDuration</td>
-                <td data-label="Default:" class="default-row">700</td>
-                <td>The time it takes for the Lightbox container to animate its width and height when transition between different size images, in milliseconds.</td>
-              </tr>
-              <tr>
-                <td>showImageNumberLabel</td>
-                <td data-label="Default:" class="default-row">true</td>
-                <td>If false, the text indicating the current image number and the total number of images in set (Ex. "image 2 of 4") will be hidden.</td>
-              </tr>
-              <tr>
-                <td>wrapAround</td>
-                <td data-label="Default:" class="default-row">false</td>
-                <td>If true, when a user reaches the last image in a set, the right navigation arrow will appear and they will be to continue moving forward which will take them back to the first image in the set.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <table class="options-table">
+          <thead>
+            <tr>
+              <th>Option</th>
+              <th>Default</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>alwaysShowNavOnTouchDevices</td>
+              <td data-label="Default:" class="default-row">false</td>
+              <td>If true, the left and right navigation arrows which appear on mouse hover when viewing image sets will always be visible on devices which support touch.</td>
+            </tr>
+            <tr>
+              <td>albumLabel</td>
+              <td data-label="Default:" class="default-row">"Image %1 of %2"</td>
+              <td>The text displayed below the caption when viewing an image set. The default text shows the current image number and the total number of images in the set.</td>
+            </tr>
+            <tr>
+              <td>disableScrolling</td>
+              <td data-label="Default:" class="default-row">false</td>
+              <td>If true, prevent the page from scrolling while Lightbox is open. This works by settings overflow hidden on the body.</td>
+            </tr>
+            <tr>
+              <td>fadeDuration</td>
+              <td data-label="Default:" class="default-row">600</td>
+              <td>The time it takes for the Lightbox container and overlay to fade in and out, in milliseconds.</td>
+            </tr>
+            <tr>
+              <td>fitImagesInViewport</td>
+              <td data-label="Default:" class="default-row">true</td>
+              <td>If true, resize images that would extend outside of the viewport so they fit neatly inside of it. This saves the user from having to scroll to see the entire image.</td>
+            </tr>
+            <tr>
+              <td>imageFadeDuration</td>
+              <td data-label="Default:" class="default-row">600</td>
+              <td>The time it takes for the image to fade in once loaded, in milliseconds.</td>
+            </tr>
+            <tr>
+              <td>maxWidth</td>
+              <td data-label="Default:" class="default-row">&nbsp;</td>
+              <td>If set, the image width will be limited to this number, in pixels. Aspect ratio will not be maintained.</td>
+            </tr>
+            <tr>
+              <td>maxHeight</td>
+              <td data-label="Default:" class="default-row">&nbsp;</td>
+              <td>If set, the image height will be limited to this number, in pixels. Aspect ratio will not be maintained.</td>
+            </tr>
+            <tr>
+              <td>positionFromTop</td>
+              <td data-label="Default:" class="default-row">50</td>
+              <td>The distance from top of viewport that the Lightbox container will appear, in pixels.</td>
+            </tr>
+            <tr>
+              <td>resizeDuration</td>
+              <td data-label="Default:" class="default-row">700</td>
+              <td>The time it takes for the Lightbox container to animate its width and height when transition between different size images, in milliseconds.</td>
+            </tr>
+            <tr>
+              <td>showImageNumberLabel</td>
+              <td data-label="Default:" class="default-row">true</td>
+              <td>If false, the text indicating the current image number and the total number of images in set (Ex. "image 2 of 4") will be hidden.</td>
+            </tr>
+            <tr>
+              <td>wrapAround</td>
+              <td data-label="Default:" class="default-row">false</td>
+              <td>If true, when a user reaches the last image in a set, the right navigation arrow will appear and they will be to continue moving forward which will take them back to the first image in the set.</td>
+            </tr>
+          </tbody>
+        </table>
       </section>
 
 
       <!-- BROWSER SUPPORT -->
 
       <section id="browser-support" class="browser-support-section">
-        <div class="container">
-          <h2>Browser support</h2>
-          <p>Lightbox2 has been tested successfully in the following browsers:</p>
-          <ul>
-            <li><strong>Internet Explorer.</strong><br />The <code>lightbox-plus-jquery.js</code> file includes jQuery v2.x and supports IE 9+. If you want to support IE 6, 7, and 8, use your own copy of jQuery v1.x with <code>lightbox.js</code>.</li>
-            <li><strong>Chrome</strong></li>
-            <li><strong>Safari</strong></li>
-            <li><strong>Firefox</strong></li>
-            <li><strong>iOS Safari</strong></li>
-            <li><strong>iOS Chrome</strong></li>
-            <li><strong>Android Browser</strong></li>
-            <li><strong>Android Chrome</strong></li>
-          </ul>
-        </div>
+        <h2>Browser support</h2>
+        <p>Lightbox2 has been tested successfully in the following browsers:</p>
+        <ul>
+          <li><strong>Internet Explorer.</strong><br />The <code>lightbox-plus-jquery.js</code> file includes jQuery v2.x and supports IE 9+. If you want to support IE 6, 7, and 8, use your own copy of jQuery v1.x with <code>lightbox.js</code>.</li>
+          <li><strong>Chrome</strong></li>
+          <li><strong>Safari</strong></li>
+          <li><strong>Firefox</strong></li>
+          <li><strong>iOS Safari</strong></li>
+          <li><strong>iOS Chrome</strong></li>
+          <li><strong>Android Browser</strong></li>
+          <li><strong>Android Chrome</strong></li>
+        </ul>
       </section>
 
 
       <!-- LICENSE -->
 
       <section id="license" class="license-section">
-        <div class="container">
-          <h2>License</h2>
-          <p>Lightbox2 is licensed under <a href="https://raw.githubusercontent.com/lokesh/lightbox2/master/LICENSE">The MIT License</a>.</p>
-          <ul>
-            <li><strong>100% Free.</strong> Lightbox is free to use in both commercial and non-commercial work.</li>
-            <li><strong>Attribution is required.</strong>This means you must leave my name, my homepage link, and the license info intact. None of these items have to be user-facing and can remain within the code.</li>
-          </ul>
-        </div>
+        <h2>License</h2>
+        <p>Lightbox2 is licensed under <a href="https://raw.githubusercontent.com/lokesh/lightbox2/master/LICENSE">The MIT License</a>.</p>
+        <ul>
+          <li><strong>100% Free.</strong> Lightbox is free to use in both commercial and non-commercial work.</li>
+          <li><strong>Attribution is required.</strong>This means you must leave my name, my homepage link, and the license info intact. None of these items have to be user-facing and can remain within the code.</li>
+        </ul>
       </section>
 
       <section id="help" class="help-section">
-        <div class="container">
-          <h2>Help</h2>
+        <h2>Help</h2>
 
-          <h3>Have a question about how to use Lightbox?</h3>
-          <p>Follow the steps below to get help. Make sure you have read the documentation on this page and looked at the included example first.</p>
-          <ol>
-            <li>Search <a href="//stackoverflow.com/questions/tagged/lightbox2">Stackoverflow</a> to see if other people have run into the same issue you are having.</li>
-            <li>If your issue is unique, then <a href="//stackoverflow.com/questions/ask">post a new question on Stackoverflow</a>. Use the <code>lightbox2</code> tag.</li>
-          </ol>
-          <p>Do not use Github Issues to report personal support requests.</p>
+        <h3>Have a question about how to use Lightbox?</h3>
+        <p>Follow the steps below to get help. Make sure you have read the documentation on this page and looked at the included example first.</p>
+        <ol>
+          <li>Search <a href="//stackoverflow.com/questions/tagged/lightbox2">Stackoverflow</a> to see if other people have run into the same issue you are having.</li>
+          <li>If your issue is unique, then <a href="//stackoverflow.com/questions/ask">post a new question on Stackoverflow</a>. Use the <code>lightbox2</code> tag.</li>
+        </ol>
+        <p>Do not use Github Issues to report personal support requests.</p>
 
-          <h3>Found a bug?</h3>
-          <p>If you find a bug, follow the instructions in the <a href="https://github.com/lokesh/lightbox2/blob/master/CONTRIBUTING.md#found-a-bug">Contribution Guildelines</a> to report the issue.</p>
-
-        </div>
+        <h3>Found a bug?</h3>
+        <p>If you find a bug, follow the instructions in the <a href="https://github.com/lokesh/lightbox2/blob/master/CONTRIBUTING.md#found-a-bug">Contribution Guildelines</a> to report the issue.</p>
       </section>
 
 
       <!-- FOOTER -->
 
       <footer>
-        <div class="container">
-          <p>
-            <div class="logo-credit">Created by Lokesh Dhakar</div>
-            <a href="https://twitter.com/lokesh" class="button">Twitter</a> <a href="https://lokeshdhakar.com" class="button">Website</a>
-          </p>
-        </div>
+        <p>
+          <div class="logo-credit">Created by Lokesh Dhakar</div>
+          <a href="https://twitter.com/lokesh" class="button">Twitter</a> <a href="https://lokeshdhakar.com" class="button">Website</a>
+        </p>
       </footer>
 
     </div><!-- .content -->
+
+  </div><!-- .page -->
 
     <!-- SCRIPTS -->
 

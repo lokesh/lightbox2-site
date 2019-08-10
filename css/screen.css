@@ -24,10 +24,13 @@
   --border-color: #000;
   --border-color-light: #ccc; /* Used for inline content  */
 
-  --border-radius: 4px; /* Prev 4px */
-  --border-radius-large: 8px; /* Prev 6px */
-  --border-radius-xl: 12px; /* Prev 8px */
+  --border-radius: 8px; 
+  --border-radius-large: 12px;
+  --border-radius-xl: 16px;
   
+  /* Layout */
+  --page-width: 56rem;
+
   /* Breakpoints */
   --sm-screen: 640px;
 }
@@ -174,6 +177,7 @@ a:hover {
 
 /* Code
  * * ========================================================================== */
+
 code {
   background-color: var(--code-bg-color);
   border-radius: var(--border-radius);
@@ -264,57 +268,59 @@ hr {
     margin-left: 0;
   }
 }
+
 /* -- Layout ------------------------------------------------------------------ */
-.nav {
-  display: none;
-  position: fixed;
-  width: 120px;
-  height: 100%;
-  padding-top: 6.9rem;
-  text-align: right;
-  border-right: 1px solid var(--border-color-light);
+
+.page {
+  display: flex;
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 0 8px;
 }
 
-@media (min-width: 640px) {
-  .nav {
-    display: block;
-    width: 20%;
-  }
+.sidebar {
+  display: none;
+  flex: 0 0 12rem;
 }
+
+.nav {
+  position: sticky;
+  top: 7.25rem;
+  margin-right: 32px;
+}
+
 .nav-item {
   display: block;
-  padding: 2px 32px 2px 0;
+  padding: 4px 16px;
+  font-weight: var(--bold);
+  border-radius: var(--border-radius);
+}
+
+.nav-item:hover {
+  text-decoration: none;
+  background-color: var(--hover-bg-color);
 }
 
 a.nav-item:focus {
   outline: 0;
 }
 
-.content {
-  margin-left: 0;
-}
-
 @media (min-width: 640px) {
-  .content {
-    margin-left: 20%;
+  .page {
+    padding: 0 16px;
+  }
+  
+  .sidebar {
+    display: block;
   }
 }
+
+
 section {
-  border-top: 1px solid var(--border-color-light);
+  border-top: 2px solid var(--border-color-light);
   padding: 2rem 0;
 }
 
-.container {
-  margin: 0 auto;
-  max-width: 1000px;
-  padding: 0 8px;
-}
-
-@media (min-width: 640px) {
-  .container {
-    padding: 0 32px;
-  }
-}
 .row:after {
   content: "";
   display: table;
@@ -379,11 +385,9 @@ header {
   background-color: var(--bg-color);
   line-height: 0;
   border-radius: var(--border-radius-large);
-  transition: background-color 0.5s ease-out;
 }
 .example-image-link:hover {
   background-color: var(--link-color);
-  transition: none;
 }
 
 .example-image {
