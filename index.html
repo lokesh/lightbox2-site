@@ -19,27 +19,16 @@
   </head>
   <body>
 
-  <div class="page">
+  <header class="header">
+    <div class="column">
 
-    <div class="sidebar">
-      <nav id="nav" class="nav">
-        <a href="#examples" class="nav-item">Examples</a>
-        <a href="#getting-started" class="nav-item">Getting started</a>
-        <a href="#options" class="nav-item">Options</a>
-        <a href="#browser-support" class="nav-item">Browser support</a>
-        <a href="#license" class="nav-item">License</a>
-        <a href="#help" class="nav-item">Help</a>
-      </nav>
-    </div>
+      <div class="sidebar">
+      </div>
 
-    <div class="content">
+      <div class="content">
 
-
-      <!-- HEADER -->
-
-      <header id="download">
         <h1 class="logo">
-          <img src="images/picture.svg" class="picture-icon" alt="Icon indicating an image" />Lightbox
+          Lightbox
         </h1>
         <a href="https://lokeshdhakar.com" class="logo-credit">by Lokesh Dhakar</a>
         <p class="lead">
@@ -55,8 +44,28 @@
             View on Github
           </a>
         </div>
-      </header>
+      </div>
 
+    </div>
+  </header>
+
+
+
+  <div class="main">
+    <div class="column">
+
+    <div class="sidebar">
+      <nav id="nav" class="nav">
+        <a href="#examples" class="nav-item">Examples</a>
+        <a href="#getting-started" class="nav-item">Getting started</a>
+        <a href="#options" class="nav-item">Options</a>
+        <a href="#browser-support" class="nav-item">Browser support</a>
+        <a href="#license" class="nav-item">License</a>
+        <a href="#help" class="nav-item">Help</a>
+      </nav>
+    </div>
+
+    <div class="content">
 
       <!-- EXAMPLES -->
 
@@ -279,8 +288,8 @@
       </footer>
 
     </div><!-- .content -->
-
-  </div><!-- .page -->
+    </div><!-- .content-column -->
+  </div><!-- .main -->
 
     <!-- SCRIPTS -->
 
@@ -299,7 +308,7 @@
 
           $('html, body').animate({
            scrollTop: $(hash).offset().top
-          }, 1000, function() {
+          }, 600, function() {
             window.location.hash = hash;
           });
         });

@@ -44,7 +44,6 @@
 
 body {
   margin: 0;
-  padding: 0 8px;
   background: var(--bg-color);
 }
 
@@ -290,13 +289,66 @@ hr {
 
 /* -- Layout ------------------------------------------------------------------ */
 
-.page {
-  display: flex;
-  max-width: var(--page-width);
-  margin: 0 auto;
-  padding: 0 8px;
+.header {
+  background: #f3f3f3;
 }
 
+.column {
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 0 16px;  
+}
+
+@media (min-width: 640px) {
+  .column {
+    display: flex;
+  }
+}
+
+/* Header */
+.header {
+  color: var(--bg-color);
+  background-color: var(--color);
+}
+
+.header {
+  padding-top: 5rem;
+  text-align: center;
+}
+
+.logo-credit {
+  display: block;
+  margin-bottom: 0.2em;
+  color: var(--muted-color);
+  font-weight: var(--bold);
+}
+
+.primary-actions {
+  padding-bottom: 6rem;
+}
+
+.primary-actions .button {
+  color: var(--color);
+  border-color: transparent;
+}
+
+.primary-actions .button:hover {
+  background-color: var(--muted-color);
+  border-color: transparent;
+}
+
+@media (min-width: 640px) {
+  .header {
+    text-align: left;
+  }
+
+  .logo-credit {
+    position: relative;
+    top: -6px;
+  }  
+}
+
+/* Main */
 .sidebar {
   display: none;
   flex: 0 0 12rem;
@@ -304,7 +356,8 @@ hr {
 
 .nav {
   position: sticky;
-  top: 7.25rem;
+  top: 0;
+  padding-top: 2rem;
   margin-right: 32px;
 }
 
@@ -324,11 +377,7 @@ a.nav-item:focus {
   outline: 0;
 }
 
-@media (min-width: 640px) {
-  .page {
-    padding: 0 16px;
-  }
-  
+@media (min-width: 640px) {  
   .sidebar {
     display: block;
   }
@@ -336,8 +385,12 @@ a.nav-item:focus {
 
 
 section {
-  border-top: 2px solid var(--border-color-light);
+  border-bottom: 2px solid var(--border-color-light);
   padding: 2rem 0;
+}
+
+section:last-of-type {
+  border-bottom: 0;
 }
 
 .row:after {
@@ -346,46 +399,6 @@ section {
   clear: both;
 }
 
-header {
-  padding-top: 5rem;
-  text-align: center;
-}
-
-@media (min-width: 640px) {
-  header {
-    padding-top: 6.5rem;
-    text-align: left;
-  }
-}
-.picture-icon {
-  width: 45px;
-  height: 45px;
-  margin-right: 0.5rem;
-}
-
-@media (min-width: 640px) {
-  .picture-icon {
-    width: 59px;
-    height: 59px;
-  }
-}
-
-.logo-credit {
-  display: block;
-  margin-bottom: 0.2em;
-  color: var(--muted-color);
-  font-weight: var(--bold);
-}
-
-@media (min-width: 640px) {
-  .logo-credit {
-    position: relative;
-    top: -6px;
-  }
-}
-.primary-actions {
-  padding-bottom: 5rem;
-}
 
 /* -- Examples -- */
 .image-row {
