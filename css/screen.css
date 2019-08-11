@@ -357,19 +357,22 @@ hr {
 .nav {
   position: sticky;
   top: 0;
-  padding-top: 2rem;
+  padding-top: 3rem;
   margin-right: 32px;
 }
 
 .nav-item {
   display: block;
-  padding: 4px 16px;
+  padding: 6px 16px;
+  line-height: 1.25em;
+  color: var(--muted-color);
   font-weight: var(--bold);
   border-radius: var(--border-radius);
 }
 
 .nav-item:hover {
   text-decoration: none;
+  color: var(--color);
   background-color: var(--hover-bg-color);
 }
 
