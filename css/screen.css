@@ -33,7 +33,7 @@
   --page-width: 56rem;
 
   /* Breakpoints */
-  --sm-screen: 640px;
+  --sm-screen: 720px;
 }
 
 /* Base
@@ -102,7 +102,7 @@ h1 {
   margin: 0;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 720px) {
   h1 {
     font-size: 80px;
   }
@@ -113,7 +113,7 @@ h2 {
   text-align: center;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 720px) {
   h2 {
     text-align: left;
   }
@@ -123,7 +123,7 @@ h3 {
   text-align: center;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 720px) {
   h3 {
     text-align: left;
   }
@@ -169,7 +169,7 @@ ol {
   padding-left: 18px;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 720px) {
   ul,
 ol {
     padding-left: 40px;
@@ -266,7 +266,7 @@ th {
   text-decoration: none;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 720px) {
   .button {
     display: inline-block;
     margin-right: 8px;
@@ -280,7 +280,7 @@ hr {
   border-top: 1px solid var(--border-color-light);
 }
 
-@media (min-width: 640px) {
+@media (min-width: 720px) {
   hr {
     width: 480px;
     margin-left: 0;
@@ -299,7 +299,7 @@ hr {
   padding: 0 16px;  
 }
 
-@media (min-width: 640px) {
+@media (min-width: 720px) {
   .column {
     display: flex;
   }
@@ -325,6 +325,8 @@ hr {
 
 .primary-actions {
   padding-bottom: 6rem;
+  max-width: 360px;
+  margin: 0 auto;
 }
 
 .primary-actions .button {
@@ -337,7 +339,7 @@ hr {
   border-color: transparent;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 720px) {
   .header {
     text-align: left;
   }
@@ -346,6 +348,10 @@ hr {
     position: relative;
     top: -6px;
   }  
+
+  .primary-actions {
+    max-width: none;
+  }
 }
 
 /* Main */
@@ -367,6 +373,7 @@ hr {
 
 .nav-list {
   margin: 0 16px 0 0;
+  padding: 0;
   text-align: right;
   list-style: none;
 }
@@ -394,7 +401,7 @@ a.nav-item:focus {
   outline: 0;
 }
 
-@media (min-width: 640px) {  
+@media (min-width: 720px) {  
   .sidebar {
     display: block;
   }
@@ -422,7 +429,7 @@ section:last-of-type {
   text-align: center;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 720px) {
   .image-row {
     text-align: left;
   }
@@ -494,7 +501,7 @@ section:last-of-type {
   border-bottom: none;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 720px) {
   .options-table thead {
     display: none;
   }
@@ -528,7 +535,7 @@ footer .button {
   margin-top: 0.5rem;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 720px) {
   footer {
     text-align: left;
   }
