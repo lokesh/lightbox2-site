@@ -210,6 +210,7 @@ pre {
   border: 1px solid var(--border-color-light);
 }
 pre code {
+  padding: 0;
   color: inherit;
 }
 
@@ -288,10 +289,6 @@ hr {
 }
 
 /* -- Layout ------------------------------------------------------------------ */
-
-.header {
-  background: #f3f3f3;
-}
 
 .column {
   max-width: var(--page-width);
