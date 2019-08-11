@@ -351,18 +351,32 @@ hr {
 /* Main */
 .sidebar {
   display: none;
-  flex: 0 0 12rem;
+  flex: 0 0 14rem;
 }
 
 .nav {
   position: sticky;
-  top: 0;
-  padding-top: 3rem;
+  top: 3rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
   margin-right: 32px;
+  border-right: 2px solid var(--border-color-light);
+  text-align: right;
 }
 
-.nav-item {
-  display: block;
+.nav-list {
+  margin: 0 16px 0 0;
+  text-align: right;
+  list-style: none;
+}
+
+.nav-list-item {
+  margin: 0;
+}
+
+.nav-link {
+  display: inline-block;
   padding: 6px 16px;
   line-height: 1.25em;
   color: var(--muted-color);
@@ -370,7 +384,7 @@ hr {
   border-radius: var(--border-radius);
 }
 
-.nav-item:hover {
+.nav-link:hover {
   text-decoration: none;
   color: var(--color);
   background-color: var(--hover-bg-color);

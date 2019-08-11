@@ -56,12 +56,14 @@
 
     <div class="sidebar">
       <nav id="nav" class="nav">
-        <a href="#examples" class="nav-item">Examples</a>
-        <a href="#getting-started" class="nav-item">Getting started</a>
-        <a href="#options" class="nav-item">Options</a>
-        <a href="#browser-support" class="nav-item">Browser support</a>
-        <a href="#license" class="nav-item">License</a>
-        <a href="#help" class="nav-item">Help</a>
+        <ul class="nav-list">
+          <li class="nav-list-item"><a href="#examples" class="nav-link">Examples</a></li>
+          <li class="nav-list-item"><a href="#getting-started" class="nav-link">Getting started</a></li>
+          <li class="nav-list-item"><a href="#options" class="nav-link">Options</a></li>
+          <li class="nav-list-item"><a href="#browser-support" class="nav-link">Browser support</a></li>
+          <li class="nav-list-item"><a href="#license" class="nav-link">License</a></li>
+          <li class="nav-list-item"><a href="#help" class="nav-link">Help</a></li>
+        </ul>
       </nav>
     </div>
 
@@ -302,7 +304,7 @@
 
     <script>
       $(function() {
-        $('#nav').on('click', '.nav-item', function(event) {
+        $('#nav').on('click', '.nav-link', function(event) {
           event.preventDefault();
           var hash = this.hash;
 
