@@ -12,5 +12,5 @@ by [Lokesh Dhakar](http://www.lokeshdhakar.com)
 ### Build and deploy steps
 
 - ```npm install```
-- ```npm run build```
-- ```npm run  deploy```
+- ```npm run dev```
+- ```npm run deploy```
