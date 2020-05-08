@@ -306,17 +306,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/plugins/unescaped-markup/prism-unescaped-markup.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox-plus-jquery.min.js"></script>
 
-    <script>
-      // Github star count
-      fetch('https://api.github.com/repos/lokesh/lightbox2')
-        .then(res => res.json())
-        .then(data => {
-          document.querySelector('.gh-count-number').innerText = data.stargazers_count;
-        })
-        .catch(err => {
-          document.querySelector('.gh-count').style.display = 'none';
-        })
+    <script type="module">
+      import { getStarCount } from './js/github.js';
 
+      async function updateGithubButton() {
+        try {
+          const count = await getStarCount('lokesh', 'lightbox2');
+          document.querySelector('.gh-count-number').innerText = count;
+        } catch(err) {
+          document.querySelector('.gh-count').style.display = 'none';
+        }
+      }
+
+      updateGithubButton();
+    </script>
+
+    <script>
       // Smooth scrolling for side nav
       $(function() {
         $('#nav').on('click', '.nav-link', function(event) {
@@ -331,8 +336,6 @@
         });
       });
     </script>
-
-
 
 
     <!-- GOOGLE ANALYTICS -->
