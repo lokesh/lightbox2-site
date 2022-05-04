@@ -6,11 +6,7 @@ The Lightbox2 script repository is located at [https://github.com/lokesh/lightbo
 
 by [Lokesh Dhakar](http://www.lokeshdhakar.com)
 
+## Development
 
-## Maintainer notes
-
-### Build and deploy steps
-
-- ```npm install```
-- ```npm run dev```
-- ```npm run deploy```
+- `npm run dev`: Spins up http-server
+- `npm run deploy`: Uses sftp to deploy to Dreamhost where it is served up from `lokeshdhakar.com/projects/lightbox2` folder.

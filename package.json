@@ -9,8 +9,8 @@
     "url": "https://github.com/lokesh/lightbox2-site.git"
   },
   "devDependencies": {
-    "ftp-deploy": "^2.3.7",
-    "http-server": "^0.12.3"
+    "http-server": "^0.12.3",
+    "sftp-upload": "^1.0.2"
   },
   "private": true,
   "licenses": [
