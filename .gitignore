@@ -1,4 +1,4 @@
 node_modules
 
-.host*
+.host.json
 .ftp*
