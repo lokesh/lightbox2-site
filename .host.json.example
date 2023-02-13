@@ -1,9 +1,7 @@
 {
-    "config": {
-        "host": "balin.dreamhost.com",
-        "username": "xxx",
-        "password": "xxx",
-        "port": 22",
-        "remoteDir": "/home/dh_cfdecf/lokeshdhakar.com/projects/lightbox2"
-    }
+    "host":"balin.dreamhost.com",
+    "port":"22",
+    "username":"xxx",
+    "password":"xxx",
+    "directory":"/home/dh_cfdecf/lokeshdhakar.com/projects/lightbox2"
 }
