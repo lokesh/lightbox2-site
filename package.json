@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "http-server": "^0.12.3",
-    "sftp-upload": "^1.0.2"
+    "ssh2-sftp-client": "^12.0.1"
   },
   "private": true,
   "licenses": [
@@ -19,7 +19,7 @@
     }
   ],
   "scripts": {
-    "build": "cp node_modules/lightbox2/dist/css/lightbox.min.css vendor/lightbox2/ && cp node_modules/lightbox2/dist/js/lightbox-plus-jquery.min.js vendor/lightbox2/ && cp -r node_modules/lightbox2/dist/images vendor/lightbox2/",
+    "build": "mkdir -p vendor/lightbox2/css vendor/lightbox2/js vendor/lightbox2/images && cp node_modules/lightbox2/dist/css/lightbox.min.css vendor/lightbox2/css/ && cp node_modules/lightbox2/dist/js/lightbox-plus-jquery.min.js vendor/lightbox2/js/ && cp node_modules/lightbox2/dist/images/* vendor/lightbox2/images/",
     "dev": "http-server",
     "deploy": "node ./build/deploy.js"
   },
