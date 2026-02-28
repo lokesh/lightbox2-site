@@ -492,12 +492,16 @@ section:last-of-type {
 
 /* -- Options -- */
 .options-section th,
-.options-section td {
+.options-section td,
+.api-section th,
+.api-section td {
   padding: 8px 16px 8px 1px;
   border-bottom: 1px solid var(--border-color-light);
 }
 .options-section th:last-child,
-.options-section td:last-child {
+.options-section td:last-child,
+.api-section th:last-child,
+.api-section td:last-child {
   padding-right: 0;
 }
 

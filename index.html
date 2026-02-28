@@ -10,8 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="shortcut icon" href="images/favicon.png">
-
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/lightbox2@2.12.0/dist/css/lightbox.min.css">
     <link rel="stylesheet" href="css/screen.css">
     <link rel="stylesheet" href="css/prism.css">
 
@@ -67,6 +66,8 @@
           <li class="nav-list-item"><a href="#examples" class="nav-link">Examples</a></li>
           <li class="nav-list-item"><a href="#getting-started" class="nav-link">Getting started</a></li>
           <li class="nav-list-item"><a href="#options" class="nav-link">Options</a></li>
+          <li class="nav-list-item"><a href="#api" class="nav-link">API</a></li>
+          <li class="nav-list-item"><a href="#theming" class="nav-link">Theming</a></li>
           <li class="nav-list-item"><a href="#browser-support" class="nav-link">Browser support</a></li>
           <li class="nav-list-item"><a href="#license" class="nav-link">License</a></li>
           <li class="nav-list-item"><a href="#help" class="nav-link">Help</a></li>
@@ -241,13 +242,104 @@
       </section>
 
 
+      <!-- API -->
+
+      <section id="api" class="api-section">
+        <h2>API</h2>
+
+        <p>Lightbox can be controlled programmatically using the following methods.</p>
+
+        <table class="options-table">
+          <thead>
+            <tr>
+              <th>Method</th>
+              <th>Parameters</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>open</td>
+              <td data-label="Parameters:" class="default-row">images, startIndex</td>
+              <td>Open Lightbox programmatically. Pass a URL string for a single image, or an array of <code>{link, title, alt}</code> objects for a set. <code>startIndex</code> is optional and defaults to <code>0</code>.</td>
+            </tr>
+            <tr>
+              <td>close</td>
+              <td data-label="Parameters:" class="default-row">&nbsp;</td>
+              <td>Close the currently open Lightbox.</td>
+            </tr>
+            <tr>
+              <td>next</td>
+              <td data-label="Parameters:" class="default-row">&nbsp;</td>
+              <td>Navigate to the next image in the set.</td>
+            </tr>
+            <tr>
+              <td>prev</td>
+              <td data-label="Parameters:" class="default-row">&nbsp;</td>
+              <td>Navigate to the previous image in the set.</td>
+            </tr>
+            <tr>
+              <td>destroy</td>
+              <td data-label="Parameters:" class="default-row">&nbsp;</td>
+              <td>Remove Lightbox DOM elements and unbind all event listeners. Use this for cleanup in single-page applications.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Example</h3>
+<pre><code class="prism language-javascript"><!--// Open a single image
+lightbox.open('images/image-1.jpg');
+
+// Open a set, starting at the second image
+lightbox.open([
+  { link: 'images/image-1.jpg', title: 'First image' },
+  { link: 'images/image-2.jpg', title: 'Second image' },
+  { link: 'images/image-3.jpg', title: 'Third image' }
+], 1);--></code></pre>
+      </section>
+
+
+      <!-- THEMING -->
+
+      <section id="theming" class="theming-section">
+        <h2>Theming</h2>
+
+        <p>Lightbox provides CSS custom properties that you can override to customize its appearance without modifying the source CSS.</p>
+
+<pre><code class="prism language-css"><!--:root {
+  --lb-overlay-bg: black;
+  --lb-overlay-opacity: 0.8;
+  --lb-container-bg: white;
+  --lb-image-border-width: 4px;
+  --lb-image-border-color: white;
+  --lb-border-radius: 3px;
+  --lb-text-color: #ccc;
+  --lb-caption-link-color: #4ae;
+  --lb-number-color: #999;
+  --lb-nav-transition-speed: 0.6s;
+  --lb-close-transition-speed: 0.2s;
+}--></code></pre>
+
+        <p>Override any of these in your own stylesheet:</p>
+<pre><code class="prism language-css"><!--:root {
+  --lb-overlay-bg: #1a1a2e;
+  --lb-overlay-opacity: 0.9;
+  --lb-border-radius: 8px;
+  --lb-image-border-color: #1a1a2e;
+}--></code></pre>
+      </section>
+
+
       <!-- BROWSER SUPPORT -->
 
       <section id="browser-support" class="browser-support-section">
         <h2>Browser support</h2>
+        <h3>Accessibility</h3>
+        <p>Lightbox includes built-in accessibility support: the lightbox container has <code>role="dialog"</code> and <code>aria-modal</code>, focus is trapped inside the lightbox while open, and focus is restored to the trigger element on close.</p>
+
+        <h3>Tested browsers</h3>
         <p>Lightbox2 has been tested successfully in the following browsers:</p>
         <ul>
-          <li><strong>Internet Explorer.</strong><br />The <code>lightbox-plus-jquery.js</code> file includes jQuery v2.x and supports IE 9+. If you want to support IE 6, 7, and 8, use your own copy of jQuery v1.x with <code>lightbox.js</code>.</li>
           <li><strong>Chrome</strong></li>
           <li><strong>Safari</strong></li>
           <li><strong>Firefox</strong></li>
@@ -303,7 +395,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/plugins/unescaped-markup/prism-unescaped-markup.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
+    <script src="https://unpkg.com/lightbox2@2.12.0/dist/js/lightbox-plus-jquery.min.js"></script>
 
     <script type="module">
       import { getStarCount } from './js/github.js';
