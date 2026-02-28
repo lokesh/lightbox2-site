@@ -19,7 +19,11 @@
     }
   ],
   "scripts": {
+    "build": "cp node_modules/lightbox2/dist/css/lightbox.min.css vendor/lightbox2/ && cp node_modules/lightbox2/dist/js/lightbox-plus-jquery.min.js vendor/lightbox2/ && cp -r node_modules/lightbox2/dist/images vendor/lightbox2/",
     "dev": "http-server",
     "deploy": "node ./build/deploy.js"
+  },
+  "dependencies": {
+    "lightbox2": "^2.12.0"
   }
 }
