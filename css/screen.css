@@ -35,6 +35,58 @@
   --sm-screen: 720px;
 }
 
+/* Upgrade Banner
+ * *----------------------------------------------- */
+.upgrade-banner {
+  background-color: #4a7aed;
+  color: #fff;
+  text-align: center;
+  padding: 0.75rem 2rem;
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+.upgrade-banner-content {
+  max-width: var(--page-width);
+  margin: 0 auto;
+}
+
+.upgrade-banner-version {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.4em;
+  height: 1.4em;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  font-size: 0.85em;
+  line-height: 1;
+  vertical-align: middle;
+  position: relative;
+  top: -0.05em;
+}
+
+.upgrade-banner-accent-red {
+  color: #fff;
+}
+
+.upgrade-banner-accent-green {
+  color: #fff;
+}
+
+.upgrade-banner-link {
+  display: inline-block;
+  margin-left: 0.5rem;
+  color: #fff;
+  font-weight: var(--bold);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.upgrade-banner-link:hover {
+  text-decoration: none;
+}
+
 /* Base
  * *----------------------------------------------- */
 * {
